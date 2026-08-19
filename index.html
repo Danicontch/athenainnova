@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athena Innova — Estrategia. Operaciones. Escala.</title>
+<meta name="description" content="Ayudamos a empresas ambiciosas a convertir la complejidad operativa en sistemas que escalan, con estrategia, optimización de procesos e IA.">
+<link rel="canonical" href="https://athenainnova.com/">
+<meta name="robots" content="index, follow">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Athena Innova",
+  "url": "https://athenainnova.com/",
+  "logo": "https://athenainnova.com/favicon-512.png",
+  "image": "https://athenainnova.com/og-image.jpg",
+  "description": "Consultora de estrategia, operaciones e IA. Ayudamos a empresas a convertir la complejidad operativa en sistemas que escalan.",
+  "email": "info@athenainnova.com",
+  "telephone": "+34644978164",
+  "foundingDate": "2023",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES"
+  },
+  "areaServed": ["ES", "EU"],
+  "sameAs": [
+    "https://www.linkedin.com/company/athena-innova-tech/",
+    "https://medium.com/@danielacontrerasinvestments"
+  ]
+}
+</script>
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://athenainnova.com/">
+<meta property="og:title" content="Athena Innova — Estrategia. Operaciones. Escala.">
+<meta property="og:description" content="Ayudamos a empresas ambiciosas a convertir la complejidad operativa en sistemas que escalan, con estrategia, optimización de procesos e IA.">
+<meta property="og:image" content="https://athenainnova.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Athena Innova — Estrategia. Operaciones. Escala.">
+<meta name="twitter:description" content="Del caos operativo al sistema que escala.">
+<meta name="twitter:image" content="https://athenainnova.com/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<style>
+  :root{
+    --teal-950:#04211F;
+    --teal-900:#0A2E2B;
+    --teal-800:#103F3B;
+    --turquoise:#14C9B7;
+    --turquoise-light:#5EEAD4;
+    --violet:#6D5BFF;
+    --paper:#F4FAF9;
+    --ink:#0B1F1D;
+    --ink-soft:#4B6461;
+    --grad: linear-gradient(135deg, var(--turquoise) 0%, var(--violet) 100%);
+    --grad-soft: linear-gradient(135deg, rgba(20,201,183,0.15), rgba(109,91,255,0.15));
+    --radius: 18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.02em;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:0.72rem;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 32px;
+    backdrop-filter: blur(10px);
+    background:rgba(4,33,31,0.55);
+    transition:background .3s;
+  }
+  .logo{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700; font-size:1.15rem; color:#fff;
+    display:flex; align-items:center; gap:10px;
+  }
+  .logo .dot{
+    width:10px; height:10px; border-radius:50%;
+    background:var(--grad);
+  }
+  .nav-links{display:flex; gap:32px; align-items:center;}
+  .nav-links a{
+    color:rgba(255,255,255,0.78);
+    font-size:0.92rem; font-weight:500;
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{
+    background:var(--grad);
+    color:#04211F !important;
+    font-weight:600;
+    padding:10px 20px;
+    border-radius:999px;
+    font-size:0.88rem;
+  }
+  .nav-toggle{display:none;}
+  @media (max-width:820px){
+    .nav-links{display:none;}
+    .nav-toggle{display:block; background:none; border:none; color:#fff; font-size:1.4rem; cursor:pointer;}
+  }
+  .nav-right{display:flex; align-items:center; gap:18px;}
+  .lang-btn{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.25);
+    color:#fff;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem;
+    letter-spacing:0.06em;
+    padding:7px 13px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:border-color .2s, background .2s;
+  }
+  .lang-btn:hover{border-color:var(--turquoise-light); background:rgba(255,255,255,0.14);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex; align-items:center;
+    background:radial-gradient(120% 100% at 15% 0%, #0F3B37 0%, var(--teal-950) 55%);
+    overflow:hidden;
+    padding-top:100px;
+  }
+  .hero canvas{
+    position:absolute; inset:0; width:100%; height:100%;
+    opacity:0.9;
+    mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
+  }
+  .hero-inner{
+    position:relative; z-index:2;
+    max-width:1180px; margin:0 auto; padding:0 32px;
+    width:100%;
+  }
+  .eyebrow{
+    color:var(--turquoise-light);
+    margin-bottom:22px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:''; width:26px; height:1px; background:var(--turquoise-light);
+  }
+  .hero h1{
+    color:#fff;
+    font-size:clamp(2.6rem, 6vw, 5rem);
+    line-height:1.02;
+    font-weight:700;
+    max-width:820px;
+  }
+  .hero h1 span{
+    background:var(--grad);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero p{
+    margin-top:26px;
+    color:rgba(244,250,249,0.72);
+    font-size:1.15rem;
+    max-width:560px;
+    line-height:1.6;
+  }
+  .hero-ctas{display:flex; gap:16px; margin-top:40px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--grad);
+    color:#04211F;
+    font-weight:600;
+    padding:15px 28px;
+    border-radius:999px;
+    font-size:0.95rem;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform .25s, box-shadow .25s;
+    box-shadow:0 8px 30px -8px rgba(20,201,183,0.5);
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 34px -6px rgba(20,201,183,0.65);}
+  .btn-ghost{
+    border:1px solid rgba(255,255,255,0.25);
+    color:#fff;
+    padding:15px 28px;
+    border-radius:999px;
+    font-size:0.95rem;
+    font-weight:500;
+    transition:border-color .2s, background .2s;
+  }
+  .btn-ghost:hover{border-color:var(--turquoise-light); background:rgba(255,255,255,0.05);}
+
+  .hero-tagline{
+    position:relative; z-index:2;
+    margin-top:90px;
+    display:flex; gap:0; flex-wrap:wrap;
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:22px;
+  }
+  .hero-tagline span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.55);
+    padding-right:28px; margin-right:28px;
+    border-right:1px solid rgba(255,255,255,0.15);
+  }
+  .hero-tagline span:last-child{border-right:none;}
+
+  /* ---------- SECTION LABELS ---------- */
+  .section-label{
+    display:flex; align-items:center; gap:12px;
+    color:var(--turquoise);
+    margin-bottom:18px;
+  }
+  .section-label .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem;
+    border:1px solid var(--turquoise);
+    border-radius:999px;
+    padding:3px 10px;
+  }
+  section{padding:130px 0;}
+  @media (max-width:820px){ section{padding:88px 0;} }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:80px;
+    align-items:start;
+  }
+  @media (max-width:900px){ .about-grid{grid-template-columns:1fr; gap:48px;} }
+  .about h2{
+    font-size:clamp(1.9rem, 3.4vw, 2.8rem);
+    line-height:1.15;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .about h2 em{
+    font-style:normal;
+    background:var(--grad);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .about-text{
+    margin-top:24px;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    line-height:1.75;
+    max-width:520px;
+  }
+  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(11,31,29,0.08); border-radius:var(--radius); overflow:hidden;}
+  .stat{background:var(--paper); padding:30px 26px;}
+  .stat .n{font-family:'Space Grotesk', sans-serif; font-size:2.1rem; font-weight:700; color:var(--ink);}
+  .stat .n .accent{color:var(--turquoise);}
+  .stat .l{margin-top:6px; color:var(--ink-soft); font-size:0.85rem;}
+
+  /* ---------- SERVICES ---------- */
+  .services-section{
+    background:var(--teal-950);
+    color:#fff;
+    position:relative;
+  }
+  .services-section .section-label{color:var(--turquoise-light);}
+  .services-section .section-label .num{border-color:var(--turquoise-light);}
+  .services-head h2{color:#fff; font-size:clamp(1.9rem,3.4vw,2.8rem); max-width:640px; font-weight:600;}
+  .services-head p{color:rgba(244,250,249,0.6); max-width:520px; margin-top:18px; font-size:1.05rem; line-height:1.7;}
+  .service-cards{
+    margin-top:64px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:rgba(255,255,255,0.1);
+    border-radius:var(--radius); overflow:hidden;
+  }
+  @media (max-width:900px){ .service-cards{grid-template-columns:1fr;} }
+  .service-card{
+    background:var(--teal-950);
+    padding:44px 34px;
+    position:relative;
+    transition:background .3s;
+  }
+  .service-card:hover{background:var(--teal-900);}
+  .service-card .tag{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--turquoise-light); letter-spacing:0.1em;}
+  .service-card h3{margin-top:18px; font-size:1.35rem; font-weight:600;}
+  .service-card p{margin-top:14px; color:rgba(244,250,249,0.62); font-size:0.95rem; line-height:1.65;}
+  .service-card .glow{
+    position:absolute; top:-40%; right:-30%; width:220px; height:220px;
+    background:var(--grad); opacity:0; filter:blur(60px);
+    transition:opacity .4s; border-radius:50%;
+  }
+  .service-card:hover .glow{opacity:0.35;}
+
+  /* ---------- RESULTS ---------- */
+  .results-head{max-width:640px;}
+  .results-head h2{font-size:clamp(1.9rem,3.4vw,2.8rem); font-weight:600;}
+  .results-head p{margin-top:18px; color:var(--ink-soft); font-size:1.05rem; line-height:1.7;}
+  .results-grid{
+    margin-top:60px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  }
+  @media (max-width:900px){ .results-grid{grid-template-columns:1fr;} }
+  .result-card{
+    border:1px solid rgba(11,31,29,0.1);
+    border-radius:var(--radius);
+    padding:32px 28px;
+    background:linear-gradient(180deg, #ffffff, #F4FAF9);
+    transition:transform .25s, border-color .25s;
+  }
+  .result-card:hover{transform:translateY(-4px); border-color:var(--turquoise);}
+  .result-card .n{font-family:'Space Grotesk',sans-serif; font-size:2.4rem; font-weight:700;
+    background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .result-card .l{margin-top:8px; font-weight:600; font-size:0.98rem;}
+  .result-card .d{margin-top:8px; color:var(--ink-soft); font-size:0.88rem; line-height:1.55;}
+  .results-note{display:none;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-section{
+    background:var(--teal-950);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-section::before{
+    content:'';
+    position:absolute; width:520px; height:520px; border-radius:50%;
+    background:var(--grad); filter:blur(140px); opacity:0.25;
+    top:-160px; right:-160px;
+  }
+  .contact-grid{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px;
+  }
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr; gap:44px;} }
+  .contact-grid h2{color:#fff; font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:600; max-width:420px;}
+  .contact-grid p{margin-top:18px; color:rgba(244,250,249,0.62); line-height:1.7; max-width:420px;}
+  .contact-info{margin-top:36px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+  .icon-btn{
+    width:48px; height:48px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.05);
+    color:var(--turquoise-light);
+    transition:transform .2s, background .2s, border-color .2s, color .2s;
+  }
+  .icon-btn svg{width:20px; height:20px;}
+  .icon-btn:hover{
+    background:var(--grad);
+    border-color:transparent;
+    color:#04211F;
+    transform:translateY(-3px);
+  }
+  form{display:flex; flex-direction:column; gap:16px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:560px){ .form-row{grid-template-columns:1fr;} }
+  label{font-size:0.8rem; color:rgba(244,250,249,0.55); margin-bottom:6px; display:block;}
+  input, textarea{
+    width:100%;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:10px;
+    padding:13px 14px;
+    color:#fff;
+    font-family:'Inter', sans-serif;
+    font-size:0.95rem;
+    transition:border-color .2s, background .2s;
+  }
+  input:focus, textarea:focus{
+    outline:none; border-color:var(--turquoise); background:rgba(255,255,255,0.09);
+  }
+  textarea{min-height:120px; resize:vertical;}
+  .submit-btn{
+    margin-top:6px;
+    align-self:flex-start;
+    background:var(--grad);
+    color:#04211F;
+    font-weight:600;
+    padding:14px 30px;
+    border:none;
+    border-radius:999px;
+    font-size:0.95rem;
+    cursor:pointer;
+    transition:transform .2s;
+  }
+  .submit-btn:hover{transform:translateY(-2px);}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--teal-950);
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding:34px 0;
+  }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+  }
+  .footer-inner .logo{color:rgba(255,255,255,0.8); font-size:0.98rem;}
+  .footer-inner p{color:rgba(255,255,255,0.4); font-size:0.82rem;}
+
+  /* reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* keyboard focus visibility */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--turquoise-light); outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="dot"></span>ATHENA INNOVA</div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#quienes-somos" data-i18n="nav.about">Quiénes somos</a>
+      <a href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a href="#resultados" data-i18n="nav.results">Resultados</a>
+      <a href="#contacto" class="nav-cta" data-i18n="nav.cta">Hablemos</a>
+    </div>
+    <button id="lang-toggle" class="lang-btn" type="button" aria-label="Switch language / Cambiar idioma">EN</button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <canvas id="network"></canvas>
+  <div class="hero-inner">
+    <div class="eyebrow mono" data-i18n="hero.eyebrow">Consultoría de estrategia, operaciones e IA</div>
+    <h1 data-i18n="hero.h1">Del caos operativo <br> al sistema que <span>escala.</span></h1>
+    <p data-i18n="hero.p">Ayudamos a empresas ambiciosas a convertir la complejidad en sistemas claros. Diseñamos modelos operativos, optimizamos procesos e implementamos IA y automatización para que tu equipo ejecute sin fricción.</p>
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Habla con nosotros →</a>
+      <a href="#servicios" class="btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
+    </div>
+    <div class="hero-tagline">
+      <span data-i18n="hero.tag1">Estrategia</span>
+      <span data-i18n="hero.tag2">Operaciones</span>
+      <span data-i18n="hero.tag3">Escala</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= QUIÉNES SOMOS ================= -->
+<section id="quienes-somos" class="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-label"><span class="num">01</span><span class="mono" data-i18n="about.label">Quiénes somos</span></div>
+      <h2 data-i18n="about.h2">Construimos organizaciones que <em>escalan sin romperse.</em></h2>
+      <p class="about-text" data-i18n="about.p1">Athena Innova es una consultora de IT Services & IT Consulting. Trabajamos con equipos directivos que necesitan pasar de la complejidad al control: modelos operativos claros, procesos optimizados y automatización con IA aplicada al negocio real, no a la teoría.</p>
+      <p class="about-text" data-i18n="about.p2">Nuestra misión es simple: que crecer no signifique caos.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><div class="n"><span class="accent">2023</span></div><div class="l" data-i18n="about.stat1">Año de fundación</div></div>
+      <div class="stat"><div class="n">2–10</div><div class="l" data-i18n="about.stat2">Equipo especializado</div></div>
+      <div class="stat"><div class="n">IT</div><div class="l">Consulting & Services</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l" data-i18n="about.stat4">Foco en ejecución</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICIOS ================= -->
+<section id="servicios" class="services-section">
+  <div class="wrap">
+    <div class="services-head">
+      <div class="section-label"><span class="num">02</span><span class="mono" data-i18n="services.label">Servicios</span></div>
+      <h2 data-i18n="services.h2">Tres palancas, un mismo objetivo.</h2>
+      <p data-i18n="services.p">Cada servicio ataca una causa distinta del caos operativo — y juntos forman el sistema completo de escalado.</p>
+    </div>
+    <div class="service-cards">
+      <div class="service-card">
+        <div class="glow"></div>
+        <div class="tag" data-i18n="service1.tag">Estrategia</div>
+        <h3 data-i18n="service1.h3">Modelos operativos</h3>
+        <p data-i18n="service1.p">Diseñamos la estructura de decisión, roles y prioridades para que tu empresa sepa exactamente cómo crecer sin perder el control.</p>
+      </div>
+      <div class="service-card">
+        <div class="glow"></div>
+        <div class="tag" data-i18n="service2.tag">Operaciones</div>
+        <h3 data-i18n="service2.h3">Optimización de procesos</h3>
+        <p data-i18n="service2.p">Detectamos cuellos de botella reales y rediseñamos flujos de trabajo para que cada equipo ejecute con claridad, no con caos.</p>
+      </div>
+      <div class="service-card">
+        <div class="glow"></div>
+        <div class="tag" data-i18n="service3.tag">IA & Automatización</div>
+        <h3 data-i18n="service3.h3">Sistemas inteligentes</h3>
+        <p data-i18n="service3.p">Implementamos IA y automatización donde realmente mueve la aguja: menos trabajo manual, más capacidad para pensar en grande.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTADOS ================= -->
+<section id="resultados">
+  <div class="wrap">
+    <div class="results-head">
+      <div class="section-label"><span class="num">03</span><span class="mono" data-i18n="results.label">Resultados</span></div>
+      <h2 data-i18n="results.h2">Así medimos el impacto</h2>
+      <p data-i18n="results.p">Cada proyecto se diseña para dejar un sistema medible, no solo un informe. Estos son los ejes en los que solemos ver el mayor cambio.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="n">−30%</div>
+        <div class="l" data-i18n="result1.l">Tiempo de ciclo operativo</div>
+        <div class="d" data-i18n="result1.d">Al eliminar pasos redundantes y clarificar responsabilidades en procesos clave.</div>
+      </div>
+      <div class="result-card">
+        <div class="n">+2×</div>
+        <div class="l" data-i18n="result2.l">Capacidad de ejecución</div>
+        <div class="d" data-i18n="result2.d">Equipos que antes gestionaban tareas ahora gestionan sistemas.</div>
+      </div>
+      <div class="result-card">
+        <div class="n">100%</div>
+        <div class="l" data-i18n="result3.l">Trazabilidad del proceso</div>
+        <div class="d" data-i18n="result3.d">Cada decisión y flujo queda documentado y automatizado, no en la cabeza de una persona.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto" class="contact-section">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="section-label"><span class="num">04</span><span class="mono" data-i18n="contact.label">Contacto</span></div>
+      <h2 data-i18n="contact.h2">Hablemos de tu próximo sistema.</h2>
+      <p data-i18n="contact.p">Cuéntanos dónde está el caos hoy. En 24-48h te respondemos con los siguientes pasos.</p>
+      <div class="contact-info">
+        <a href="mailto:info@athenainnova.com" class="icon-btn" aria-label="Email" title="info@athenainnova.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+        </a>
+        <a href="https://wa.me/34644978164" target="_blank" rel="noopener" class="icon-btn" aria-label="WhatsApp" title="+34 644 97 81 64">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.36 7.56L4 20l1.03-4.5A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 10.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/athena-innova-tech/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M11.5 16.5v-3.7c0-1.27.9-2.3 2.25-2.3 1.24 0 2.25 1.01 2.25 2.3v3.7"/></svg>
+        </a>
+        <a href="https://medium.com/@danielacontrerasinvestments" target="_blank" rel="noopener" class="icon-btn" aria-label="Medium" title="Medium">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M4 9h9M4 13h9M4 17h6"/><circle cx="19" cy="13" r="3"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <form id="contact-form" action="https://formspree.io/f/xppajpnr" method="POST">
+        <div class="form-row">
+          <div>
+            <label for="name" data-i18n="form.name">Nombre</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="company" data-i18n="form.company">Empresa</label>
+            <input id="company" name="company" type="text">
+          </div>
+        </div>
+        <div>
+          <label for="email" data-i18n="form.email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="message" data-i18n="form.message">¿En qué podemos ayudarte?</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" data-i18n="form.submit">Enviar mensaje →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="logo">ATHENA INNOVA</div>
+    <p>© <span id="year"></span> Athena Innova. <span data-i18n="footer.tagline">Estrategia. Operaciones. Escala.</span></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---------- Chaos-to-order network animation ----------
+  const canvas = document.getElementById('network');
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [];
+  const COUNT = 46;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function resize(){
+    W = canvas.width = canvas.offsetWidth * devicePixelRatio;
+    H = canvas.height = canvas.offsetHeight * devicePixelRatio;
+  }
+
+  function makeNodes(){
+    nodes = [];
+    const cols = 8, rows = 6;
+    for(let i=0;i<COUNT;i++){
+      const col = i % cols, row = Math.floor(i/cols) % rows;
+      const gx = (col+0.5) * (W/cols);
+      const gy = (row+0.5) * (H/rows) * 0.9 + H*0.05;
+      nodes.push({
+        x: Math.random()*W, y: Math.random()*H,
+        gx, gy,
+        r: Math.random()*1.6 + 1.2
+      });
+    }
+  }
+
+  let progress = 0; // 0 = chaos, 1 = grid
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    progress = Math.min(1, progress + (prefersReduced ? 1 : 0.006));
+
+    nodes.forEach(n=>{
+      n.cx = n.x + (n.gx - n.x) * progress;
+      n.cy = n.y + (n.gy - n.y) * progress;
+    });
+
+    // connections
+    ctx.lineWidth = 1;
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const a = nodes[i], b = nodes[j];
+        const d = Math.hypot(a.cx-b.cx, a.cy-b.cy);
+        const maxD = W*0.11;
+        if(d < maxD){
+          const alpha = (1-d/maxD) * (0.12 + 0.18*progress);
+          ctx.strokeStyle = `rgba(94,234,212,${alpha})`;
+          ctx.beginPath();
+          ctx.moveTo(a.cx,a.cy);
+          ctx.lineTo(b.cx,b.cy);
+          ctx.stroke();
+        }
+      }
+    }
+    // nodes
+    nodes.forEach(n=>{
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(20,201,183,${0.55+0.45*progress})`;
+      ctx.arc(n.cx, n.cy, n.r * devicePixelRatio, 0, Math.PI*2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  function init(){
+    resize();
+    makeNodes();
+    progress = 0;
+  }
+  window.addEventListener('resize', init);
+  init();
+  requestAnimationFrame(draw);
+
+  // ---------- i18n (ES / EN) ----------
+  const translations = {
+    "nav.about": {es:"Quiénes somos", en:"About"},
+    "nav.services": {es:"Servicios", en:"Services"},
+    "nav.results": {es:"Resultados", en:"Results"},
+    "nav.cta": {es:"Hablemos", en:"Let's talk"},
+    "hero.eyebrow": {es:"Consultoría de estrategia, operaciones e IA", en:"Strategy, Operations & AI Consulting"},
+    "hero.h1": {es:'Del caos operativo <br> al sistema que <span>escala.</span>', en:'From operational chaos <br> to a system that <span>scales.</span>'},
+    "hero.p": {es:"Ayudamos a empresas ambiciosas a convertir la complejidad en sistemas claros. Diseñamos modelos operativos, optimizamos procesos e implementamos IA y automatización para que tu equipo ejecute sin fricción.", en:"We help ambitious companies turn complexity into clear systems. We design operating models, optimize processes, and implement AI and automation so your team can execute without friction."},
+    "hero.cta1": {es:"Habla con nosotros →", en:"Talk to us →"},
+    "hero.cta2": {es:"Ver servicios", en:"See services"},
+    "hero.tag1": {es:"Estrategia", en:"Strategy"},
+    "hero.tag2": {es:"Operaciones", en:"Operations"},
+    "hero.tag3": {es:"Escala", en:"Scale"},
+    "about.label": {es:"Quiénes somos", en:"About us"},
+    "about.h2": {es:'Construimos organizaciones que <em>escalan sin romperse.</em>', en:'We build organizations that <em>scale without breaking.</em>'},
+    "about.p1": {es:"Athena Innova es una consultora de IT Services & IT Consulting. Trabajamos con equipos directivos que necesitan pasar de la complejidad al control: modelos operativos claros, procesos optimizados y automatización con IA aplicada al negocio real, no a la teoría.", en:"Athena Innova is an IT Services & IT Consulting firm. We work with leadership teams who need to move from complexity to control: clear operating models, optimized processes, and AI automation applied to real business, not theory."},
+    "about.p2": {es:"Nuestra misión es simple: que crecer no signifique caos.", en:"Our mission is simple: growth shouldn't mean chaos."},
+    "about.stat1": {es:"Año de fundación", en:"Founded"},
+    "about.stat2": {es:"Equipo especializado", en:"Specialized team"},
+    "about.stat4": {es:"Foco en ejecución", en:"Execution-focused"},
+    "services.label": {es:"Servicios", en:"Services"},
+    "services.h2": {es:"Tres palancas, un mismo objetivo.", en:"Three levers, one goal."},
+    "services.p": {es:"Cada servicio ataca una causa distinta del caos operativo — y juntos forman el sistema completo de escalado.", en:"Each service tackles a different root cause of operational chaos — together they form the complete scaling system."},
+    "service1.tag": {es:"Estrategia", en:"Strategy"},
+    "service1.h3": {es:"Modelos operativos", en:"Operating models"},
+    "service1.p": {es:"Diseñamos la estructura de decisión, roles y prioridades para que tu empresa sepa exactamente cómo crecer sin perder el control.", en:"We design the decision structure, roles, and priorities so your company knows exactly how to grow without losing control."},
+    "service2.tag": {es:"Operaciones", en:"Operations"},
+    "service2.h3": {es:"Optimización de procesos", en:"Process optimization"},
+    "service2.p": {es:"Detectamos cuellos de botella reales y rediseñamos flujos de trabajo para que cada equipo ejecute con claridad, no con caos.", en:"We identify real bottlenecks and redesign workflows so every team executes with clarity, not chaos."},
+    "service3.tag": {es:"IA & Automatización", en:"AI & Automation"},
+    "service3.h3": {es:"Sistemas inteligentes", en:"Intelligent systems"},
+    "service3.p": {es:"Implementamos IA y automatización donde realmente mueve la aguja: menos trabajo manual, más capacidad para pensar en grande.", en:"We implement AI and automation where it truly moves the needle: less manual work, more capacity to think big."},
+    "results.label": {es:"Resultados", en:"Results"},
+    "results.h2": {es:"Así medimos el impacto", en:"How we measure impact"},
+    "results.p": {es:"Cada proyecto se diseña para dejar un sistema medible, no solo un informe. Estos son los ejes en los que solemos ver el mayor cambio.", en:"Every project is designed to leave behind a measurable system, not just a report. These are the areas where we usually see the biggest change."},
+    "result1.l": {es:"Tiempo de ciclo operativo", en:"Operating cycle time"},
+    "result1.d": {es:"Al eliminar pasos redundantes y clarificar responsabilidades en procesos clave.", en:"By eliminating redundant steps and clarifying ownership in key processes."},
+    "result2.l": {es:"Capacidad de ejecución", en:"Execution capacity"},
+    "result2.d": {es:"Equipos que antes gestionaban tareas ahora gestionan sistemas.", en:"Teams that used to manage tasks now manage systems."},
+    "result3.l": {es:"Trazabilidad del proceso", en:"Process traceability"},
+    "result3.d": {es:"Cada decisión y flujo queda documentado y automatizado, no en la cabeza de una persona.", en:"Every decision and workflow is documented and automated, not stuck in someone's head."},
+    "contact.label": {es:"Contacto", en:"Contact"},
+    "contact.h2": {es:"Hablemos de tu próximo sistema.", en:"Let's talk about your next system."},
+    "contact.p": {es:"Cuéntanos dónde está el caos hoy. En 24-48h te respondemos con los siguientes pasos.", en:"Tell us where the chaos is today. We'll get back to you within 24-48h with next steps."},
+    "form.name": {es:"Nombre", en:"Name"},
+    "form.company": {es:"Empresa", en:"Company"},
+    "form.email": {es:"Email", en:"Email"},
+    "form.message": {es:"¿En qué podemos ayudarte?", en:"How can we help you?"},
+    "form.submit": {es:"Enviar mensaje →", en:"Send message →"},
+    "footer.tagline": {es:"Estrategia. Operaciones. Escala.", en:"Strategy. Operations. Scale."}
+  };
+
+  const pageMeta = {
+    es: {
+      title: "Athena Innova — Estrategia. Operaciones. Escala.",
+      description: "Ayudamos a empresas ambiciosas a convertir la complejidad operativa en sistemas que escalan, con estrategia, optimización de procesos e IA."
+    },
+    en: {
+      title: "Athena Innova — Strategy. Operations. Scale.",
+      description: "We help ambitious companies turn operational complexity into systems that scale, through strategy, process optimization, and AI."
+    }
+  };
+
+  function applyLanguage(lang){
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(translations[key]) el.innerHTML = translations[key][lang];
+    });
+    document.documentElement.lang = lang;
+    document.title = pageMeta[lang].title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if(metaDesc) metaDesc.setAttribute('content', pageMeta[lang].description);
+    const langBtn = document.getElementById('lang-toggle');
+    if(langBtn) langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+    currentLang = lang;
+  }
+
+  let currentLang = 'es';
+  const browserLang = (navigator.language || 'es').toLowerCase();
+  const initialLang = browserLang.startsWith('es') ? 'es' : 'en';
+  applyLanguage(initialLang);
+
+  document.getElementById('lang-toggle').addEventListener('click', ()=>{
+    applyLanguage(currentLang === 'es' ? 'en' : 'es');
+  });
+</script>
+
+</body>
+</html>
