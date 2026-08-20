@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Crawlers de modelos de IA — permitidos explícitamente para que puedan
+# leer e indexar el contenido de athenainnova.com
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://athenainnova.com/sitemap.xml
