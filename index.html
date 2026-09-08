@@ -7,6 +7,7 @@
 <meta name="description" content="Ayudamos a empresas ambiciosas a convertir la complejidad operativa en sistemas que escalan, con estrategia, optimización de procesos e IA.">
 <link rel="canonical" href="https://athenainnova.com/">
 <meta name="robots" content="index, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
 <script type="application/ld+json">
 {
@@ -771,7 +772,7 @@
     </div>
     <div class="embed-grid">
       <div class="embed-card">
-        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7495841818455130112" height="648" width="504" frameborder="0" allowfullscreen="" title="Publicación de LinkedIn de Athena Innova"></iframe>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7495841818455130112" height="648" width="504" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Publicación de LinkedIn de Athena Innova"></iframe>
       </div>
     </div>
   </div>
@@ -838,6 +839,7 @@
     </div>
     <div>
       <form id="contact-form" action="https://formspree.io/f/xppajpnr" method="POST">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
         <div class="form-row">
           <div>
             <label for="name" data-i18n="form.name">Nombre</label>
@@ -910,7 +912,23 @@
   }
   window.addEventListener('scroll', updateScrollProgress, {passive:true});
 
+  // Solo animamos cuando el hero está visible y la pestaña está activa:
+  // evita gastar CPU/batería dibujando algo que nadie está viendo.
+  let heroVisible = true;
+  const heroEl = document.querySelector('.hero');
+  if('IntersectionObserver' in window && heroEl){
+    new IntersectionObserver(function(entries){
+      heroVisible = entries[0].isIntersecting;
+      if(heroVisible) requestAnimationFrame(draw);
+    }, {threshold: 0}).observe(heroEl);
+  }
+  document.addEventListener('visibilitychange', function(){
+    if(!document.hidden && heroVisible) requestAnimationFrame(draw);
+  });
+
   function draw(){
+    if(document.hidden || !heroVisible) return; // pausa: se reanuda al volver
+
     ctx.clearRect(0,0,W,H);
 
     if(prefersReduced){
@@ -1080,6 +1098,42 @@
   document.getElementById('lang-toggle').addEventListener('click', ()=>{
     applyLanguage(currentLang === 'es' ? 'en' : 'es');
   });
+
+  // ---------- Seguimiento de conversiones (GA4) ----------
+  // Envía eventos a Analytics para distinguir quién solo mira la web
+  // de quién da un paso real hacia el contacto.
+  function track(eventName, params){
+    if (typeof gtag === 'function') gtag('event', eventName, params || {});
+  }
+
+  document.addEventListener('click', function(e){
+    const link = e.target.closest('a');
+    if(!link) return;
+    const href = link.getAttribute('href') || '';
+
+    if(href.includes('calendly.com')){
+      track('calendly_click', {
+        link_url: href,
+        location: link.closest('#contacto') ? 'seccion_contacto' : 'otro',
+        language: currentLang
+      });
+    } else if(href.startsWith('mailto:')){
+      track('contact_click', {method: 'email', language: currentLang});
+    } else if(href.includes('wa.me')){
+      track('contact_click', {method: 'whatsapp', language: currentLang});
+    } else if(href.includes('linkedin.com/company')){
+      track('social_click', {method: 'linkedin', language: currentLang});
+    } else if(href.includes('medium.com')){
+      track('social_click', {method: 'medium', language: currentLang});
+    }
+  });
+
+  const contactForm = document.getElementById('contact-form');
+  if(contactForm){
+    contactForm.addEventListener('submit', function(){
+      track('generate_lead', {form_id: 'contact-form', language: currentLang});
+    });
+  }
 </script>
 
 </body>
