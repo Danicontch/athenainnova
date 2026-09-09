@@ -75,7 +75,7 @@
       "name": "¿Dónde está ubicada Athena Innova y con qué empresas trabaja?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Athena Innova tiene sede en España y trabaja con empresas en España y Europa, además de servir como puente con el ecosistema tecnológico de Latinoamérica."
+        "text": "Athena Innova tiene sede en España (Madrid y Valencia) y equipo en Santiago de Chile, y trabaja con empresas en España, Europa y Latinoamérica."
       }
     },
     {
@@ -379,6 +379,27 @@
   .stat .n .accent{color:var(--turquoise);}
   .stat .l{margin-top:6px; color:var(--ink-soft); font-size:0.85rem;}
 
+  .locations-row{
+    grid-column:1 / -1;
+    margin-top:36px;
+    display:flex; align-items:center; flex-wrap:wrap; gap:14px;
+  }
+  .locations-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .location-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+    color:var(--ink);
+    border:1px solid rgba(11,31,29,0.16);
+    border-radius:999px;
+    padding:6px 14px;
+  }
+  .location-pill::before{content:'📍'; font-size:0.75rem;}
+
   /* ---------- PROCESS (route) ---------- */
   .process-section{background:var(--paper);}
   .process-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:600; max-width:600px;}
@@ -665,6 +686,12 @@
       <div class="stat"><div class="n">IT</div><div class="l">Consulting & Services</div></div>
       <div class="stat"><div class="n">100%</div><div class="l" data-i18n="about.stat4">Foco en ejecución</div></div>
     </div>
+    <div class="locations-row">
+      <span class="locations-label" data-i18n="about.locations.label">Presencia en</span>
+      <span class="location-pill" data-i18n="about.loc1">Madrid, España</span>
+      <span class="location-pill" data-i18n="about.loc2">Valencia, España</span>
+      <span class="location-pill" data-i18n="about.loc3">Santiago, Chile</span>
+    </div>
   </div>
 </section>
 
@@ -804,7 +831,7 @@
       </details>
       <details class="faq-item">
         <summary data-i18n="faq5.q">¿Dónde están ubicados y con quién trabajan?</summary>
-        <p data-i18n="faq5.a">Con sede en España, trabajamos con empresas en España y Europa — y por nuestra propia trayectoria, también hacemos de puente con el ecosistema tech de LatAm.</p>
+        <p data-i18n="faq5.a">Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa y Latinoamérica — con un pie en cada región para entender ambos contextos de cerca.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq6.q">¿Cuánto tarda en verse el cambio?</summary>
@@ -1004,6 +1031,10 @@
     "about.stat1": {es:"Año de fundación", en:"Founded"},
     "about.stat2": {es:"Equipo especializado", en:"Specialized team"},
     "about.stat4": {es:"Foco en ejecución", en:"Execution-focused"},
+    "about.locations.label": {es:"Presencia en", en:"Presence in"},
+    "about.loc1": {es:"Madrid, España", en:"Madrid, Spain"},
+    "about.loc2": {es:"Valencia, España", en:"Valencia, Spain"},
+    "about.loc3": {es:"Santiago, Chile", en:"Santiago, Chile"},
     "process.label": {es:"Cómo trabajamos", en:"How we work"},
     "process.h2": {es:"La ruta de un sistema que escala.", en:"The route to a system that scales."},
     "process1.h3": {es:"Diagnóstico", en:"Diagnosis"},
@@ -1050,7 +1081,7 @@
     "faq4.q": {es:"Mi empresa todavía no tiene \"caos\" — ¿es muy pronto para esto?", en:"My company doesn't have \"chaos\" yet — is it too early for this?"},
     "faq4.a": {es:"Es la mejor pregunta que te puedes hacer, y casi nadie se la hace a tiempo. Diseñar el sistema antes de que el caos aparezca siempre sale más barato que arreglarlo con el negocio ya en llamas.", en:"It's the best question you can ask, and almost no one asks it in time. Designing the system before the chaos shows up is always cheaper than fixing it once the business is already on fire."},
     "faq5.q": {es:"¿Dónde están ubicados y con quién trabajan?", en:"Where are you based and who do you work with?"},
-    "faq5.a": {es:"Con sede en España, trabajamos con empresas en España y Europa — y por nuestra propia trayectoria, también hacemos de puente con el ecosistema tech de LatAm.", en:"Based in Spain, we work with companies across Spain and Europe — and given our own background, we also bridge into the LatAm tech ecosystem."},
+    "faq5.a": {es:"Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa y Latinoamérica — con un pie en cada región para entender ambos contextos de cerca.", en:"Based in Spain (Madrid and Valencia) with a team in Santiago, Chile, we work with companies across Spain, Europe and Latin America — with a foot in each region to understand both contexts closely."},
     "faq6.q": {es:"¿Cuánto tarda en verse el cambio?", en:"How long until we see change?"},
     "faq6.a": {es:"Depende del tamaño del caos, pero el diagnóstico inicial ya suele revelar en semanas, no meses, dónde está el mayor punto de fricción — y ahí es donde empezamos a actuar primero.", en:"It depends on the size of the chaos, but the initial diagnosis usually reveals within weeks, not months, where the biggest friction point is — and that's where we start acting first."},
     "contact.label": {es:"Contacto", en:"Contact"},
