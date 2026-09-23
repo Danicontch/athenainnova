@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Athena Innova — Estrategia. IA. Escala.</title>
-<meta name="description" content="Ayudamos a empresas ambiciosas a implementar IA enterprise de verdad y a controlar lo que les cuesta, con estrategia como base y FinOps como garantía.">
+<meta name="description" content="Para empresas de 50 a 500 personas que ya pagan Copilot, Gemini o cloud: llevamos la IA del piloto al uso real y controlamos lo que cuesta con FinOps. Diagnóstico gratuito.">
 <link rel="canonical" href="https://athenainnova.com/">
 <meta name="robots" content="index, follow">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -17,7 +17,7 @@
   "url": "https://athenainnova.com/",
   "logo": "https://athenainnova.com/favicon-512.png",
   "image": "https://athenainnova.com/og-image.jpg",
-  "description": "Consultora de estrategia, implementación de IA enterprise y FinOps. Ayudamos a empresas a adoptar IA de verdad y a controlar lo que les cuesta.",
+  "description": "Consultora de estrategia, PMO, implementación de IA enterprise y FinOps para empresas de 50 a 500 personas. Ayudamos a que la IA que ya pagan se use de verdad y a controlar lo que cuesta.",
   "email": "info@athenainnova.com",
   "telephone": "+34644978164",
   "foundingDate": "2023",
@@ -43,15 +43,15 @@
       "name": "¿Qué hace exactamente Athena Innova?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Athena Innova es una consultora de estrategia, implementación de IA enterprise y FinOps. Ayuda a empresas ambiciosas a adoptar IA de verdad y a controlar lo que les cuesta, sin depender de que una sola persona lo recuerde todo."
+        "text": "Athena Innova es una consultora de estrategia, implementación de IA enterprise y FinOps. Ayuda a empresas de 50 a 500 personas a adoptar IA de verdad y a controlar lo que les cuesta, sin depender de que una sola persona lo recuerde todo."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Necesito ser una gran corporación para tener una PMO?",
+      "name": "¿Con qué tamaño de empresa trabaja Athena Innova?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. El mejor momento para organizar una PMO es antes de que el caos operativo empiece a costar dinero y clientes, no después, independientemente del tamaño de la empresa."
+        "text": "Sobre todo con empresas de 50 a 500 personas que ya pagan licencias de IA (Copilot, Gemini Enterprise) o una factura cloud relevante y necesitan saber si esa inversión está rindiendo."
       }
     },
     {
@@ -64,10 +64,10 @@
     },
     {
       "@type": "Question",
-      "name": "¿Es muy pronto para esto si mi empresa todavía no tiene caos operativo?",
+      "name": "¿Es muy pronto si todavía estamos en piloto de IA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Diseñar cómo vas a adoptar IA y a controlar su costo antes de que aparezca el caos siempre resulta más económico que arreglarlo una vez que el negocio ya está creciendo sin control."
+        "text": "No, es el mejor momento. Definir cómo medir la adopción y el coste antes de desplegar licencias a toda la empresa siempre sale más barato que corregirlo cuando la factura ya creció y nadie usa la herramienta."
       }
     },
     {
@@ -98,13 +98,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://athenainnova.com/">
 <meta property="og:title" content="Athena Innova — Estrategia. IA. Escala.">
-<meta property="og:description" content="Ayudamos a empresas ambiciosas a implementar IA enterprise de verdad y a controlar lo que les cuesta, con estrategia como base y FinOps como garantía.">
+<meta property="og:description" content="Para empresas de 50 a 500 personas que ya pagan Copilot, Gemini o cloud: llevamos la IA del piloto al uso real y controlamos lo que cuesta con FinOps. Diagnóstico gratuito.">
 <meta property="og:image" content="https://athenainnova.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Athena Innova — Estrategia. IA. Escala.">
-<meta name="twitter:description" content="Del caos a la claridad: estrategia, IA enterprise y FinOps.">
+<meta name="twitter:description" content="¿Pagas IA o tu equipo la usa de verdad? IA enterprise + FinOps para empresas de 50 a 500 personas.">
 <meta name="twitter:image" content="https://athenainnova.com/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,6 +133,11 @@
     --grad: linear-gradient(135deg, var(--turquoise) 0%, var(--violet) 100%);
     --grad-soft: linear-gradient(135deg, rgba(20,201,183,0.15), rgba(109,91,255,0.15));
     --radius: 18px;
+    --indigo-950:#16123A;
+    --indigo-800:#2A2170;
+    --coral:#FF7A59;
+    --amber:#FFC24B;
+    --grad-warm: linear-gradient(135deg, var(--coral) 0%, var(--amber) 100%);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -490,6 +495,67 @@
   .result-card .d{margin-top:8px; color:var(--ink-soft); font-size:0.88rem; line-height:1.55;}
   .results-note{display:none;}
 
+  /* ---------- AUTODIAGNÓSTICO ---------- */
+  .quiz-section{background:radial-gradient(120% 100% at 85% 0%, var(--indigo-800) 0%, var(--indigo-950) 60%); color:#fff; position:relative; overflow:hidden;}
+  .quiz-section .section-label{color:var(--amber);}
+  .quiz-section .section-label .num{border-color:var(--amber);}
+  .quiz-section .submit-btn, .quiz-section .btn-primary{background:var(--grad-warm); color:var(--indigo-950); box-shadow:0 8px 30px -8px rgba(255,122,89,0.55);}
+  .quiz-section input:focus{border-color:var(--amber);}
+  .quiz-section a:focus-visible, .quiz-section button:focus-visible, .quiz-section input:focus-visible{outline-color:var(--amber);}
+  .quiz-head{max-width:680px;}
+  .quiz-head h2{color:#fff; font-size:clamp(1.9rem,3.4vw,2.8rem); font-weight:600;}
+  .quiz-head p{color:rgba(244,250,249,0.62); margin-top:18px; font-size:1.05rem; line-height:1.7;}
+  .quiz-grid{margin-top:52px; display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media (max-width:900px){ .quiz-grid{grid-template-columns:1fr;} }
+  .quiz-q{
+    border:1px solid rgba(255,255,255,0.12); border-radius:14px;
+    padding:22px 22px 20px; background:rgba(255,255,255,0.03);
+    transition:border-color .2s;
+  }
+  .quiz-q.answered{border-color:rgba(255,194,75,0.5);}
+  .quiz-q legend{
+    float:left; width:100%;
+    font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:1rem; line-height:1.45;
+    color:#fff; margin-bottom:16px;
+  }
+  .quiz-q legend .qn{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--amber); margin-right:8px;}
+  .quiz-opts{clear:both; display:flex; gap:8px; flex-wrap:wrap;}
+  .quiz-opts input{position:absolute; opacity:0; width:1px; height:1px; pointer-events:none;}
+  .quiz-opts label{
+    margin:0; display:inline-block; cursor:pointer;
+    font-size:0.88rem; color:rgba(244,250,249,0.8);
+    border:1px solid rgba(255,255,255,0.2); border-radius:999px;
+    padding:8px 16px; transition:background .2s, border-color .2s, color .2s;
+  }
+  .quiz-opts label:hover{border-color:var(--amber);}
+  .quiz-opts input:checked + label{background:var(--grad-warm); border-color:transparent; color:var(--indigo-950); font-weight:600;}
+  .quiz-opts input:focus-visible + label{outline:2px solid var(--amber); outline-offset:3px;}
+  .quiz-foot{margin-top:32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+  .quiz-progress{font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:rgba(244,250,249,0.55);}
+  .quiz-submit[disabled]{opacity:0.4; cursor:not-allowed; transform:none;}
+  .quiz-result{
+    margin-top:44px; display:none; scroll-margin-top:100px;
+    border:1px solid rgba(255,194,75,0.4); border-radius:var(--radius);
+    padding:40px 36px; background:rgba(255,255,255,0.04);
+  }
+  .quiz-result.show{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px;}
+  @media (max-width:900px){ .quiz-result.show{grid-template-columns:1fr; gap:36px;} .quiz-result{padding:30px 22px;} }
+  .quiz-score{font-family:'Space Grotesk',sans-serif; font-size:3.4rem; font-weight:700; line-height:1;
+    background:var(--grad-warm); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .quiz-score small{font-size:1.2rem;}
+  .quiz-band{margin-top:14px; font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:600;}
+  .quiz-band-text{margin-top:12px; color:rgba(244,250,249,0.7); line-height:1.7;}
+  .quiz-weak-title{margin-top:24px; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--amber);}
+  .quiz-weak{margin-top:10px; list-style:none; display:flex; flex-direction:column; gap:8px;}
+  .quiz-weak li{color:rgba(244,250,249,0.85); font-size:0.95rem; padding-left:18px; position:relative;}
+  .quiz-weak li::before{content:''; position:absolute; left:0; top:0.55em; width:8px; height:8px; border-radius:50%; background:var(--grad-warm);}
+  .quiz-next h3{font-size:1.2rem; font-weight:600;}
+  .quiz-next p{margin-top:10px; color:rgba(244,250,249,0.62); font-size:0.95rem; line-height:1.65;}
+  .quiz-next .btn-primary{margin-top:20px;}
+  .quiz-mail{margin-top:28px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1);}
+  .quiz-mail .form-row{margin-top:12px;}
+  .quiz-mail-ok{margin-top:12px; color:var(--amber); font-size:0.92rem; display:none;}
+
   /* ---------- CONTENIDO (LinkedIn embeds) ---------- */
   .content-section{background:var(--paper);}
   .content-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:600; max-width:600px;}
@@ -636,7 +702,7 @@
       <a href="#quienes-somos" data-i18n="nav.about">Quiénes somos</a>
       <a href="#proceso" data-i18n="nav.process">Cómo trabajamos</a>
       <a href="#servicios" data-i18n="nav.services">Servicios</a>
-      <a href="#enfoque" data-i18n="nav.results">Enfoque</a>
+      <a href="#autodiagnostico" data-i18n="nav.quiz">Autodiagnóstico</a>
       <a href="#contenido" data-i18n="nav.content">Contenido</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <a href="#contacto" class="nav-cta" data-i18n="nav.cta">Hablemos</a>
@@ -650,11 +716,11 @@
   <canvas id="network"></canvas>
   <div class="hero-inner">
     <div class="eyebrow mono" data-i18n="hero.eyebrow">Consultoría de estrategia, IA enterprise y FinOps</div>
-    <h1 data-i18n="hero.h1">¿Caos... <br> o solo parece que <span>todo va bien?</span></h1>
-    <p data-i18n="hero.p">Ayudamos a founders de startups en crecimiento (8-40 personas) a saber si sus proyectos realmente avanzan. Diseñamos modelos operativos, implementamos IA enterprise de verdad y gobernamos lo que cuesta (FinOps), para que tu equipo ejecute sin depender de ti.</p>
+    <h1 data-i18n="hero.h1">¿Pagas IA... <br> o tu equipo <span>la usa de verdad?</span></h1>
+    <p data-i18n="hero.p">Para empresas de 50 a 500 personas que ya invierten en Copilot, Gemini o cloud y no saben si les está saliendo rentable. Llevamos la IA del piloto al uso diario, gobernamos lo que cuesta (FinOps) y ordenamos la ejecución para que la inversión se note en resultados.</p>
     <div class="hero-ctas">
       <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Reserva tu diagnóstico gratis →</a>
-      <a href="#servicios" class="btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
+      <a href="#autodiagnostico" class="btn-ghost" data-i18n="hero.cta2">¿Tu IA es rentable? Test de 2 min</a>
     </div>
     <div class="hero-tagline">
       <span data-i18n="hero.tag1">Estrategia</span>
@@ -677,7 +743,7 @@
     <div>
       <div class="section-label"><span class="num">01</span><span class="mono" data-i18n="about.label">Quiénes somos</span></div>
       <h2 data-i18n="about.h2">Construimos organizaciones que <em>escalan sin romperse.</em></h2>
-      <p class="about-text" data-i18n="about.p1">Athena Innova es una consultora de estrategia, IA enterprise y FinOps. Trabajamos con equipos directivos que necesitan pasar de la complejidad al control: modelos operativos claros, implementación real de IA (Gemini Enterprise, Copilot y similares) y gobierno del gasto en la nube, aplicado al negocio real, no a la teoría.</p>
+      <p class="about-text" data-i18n="about.p1">Athena Innova es una consultora de estrategia, IA enterprise y FinOps. Trabajamos con equipos directivos de empresas de 50 a 500 personas que necesitan pasar de la complejidad al control: modelos operativos claros, implementación real de IA (Gemini Enterprise, Copilot y similares) y gobierno del gasto en la nube, aplicado al negocio real, no a la teoría.</p>
       <p class="about-text" data-i18n="about.p2">Nuestra misión es simple: que crecer no signifique caos.</p>
     </div>
     <div class="stat-grid">
@@ -706,7 +772,7 @@
       <div class="process-stop">
         <div class="stop-marker">01</div>
         <h3 data-i18n="process1.h3">Diagnóstico</h3>
-        <p data-i18n="process1.p">Mapeamos dónde está el caos real: procesos, roles y cuellos de botella.</p>
+        <p data-i18n="process1.p">Mapeamos licencias, uso real, gasto y cuellos de botella: dónde se pierde el valor de tu inversión en IA.</p>
       </div>
       <div class="process-stop">
         <div class="stop-marker">02</div>
@@ -732,15 +798,15 @@
   <div class="wrap">
     <div class="services-head">
       <div class="section-label"><span class="num">03</span><span class="mono" data-i18n="services.label">Servicios</span></div>
-      <h2 data-i18n="services.h2">Dos frentes, un mismo objetivo.</h2>
-      <p data-i18n="services.p">Estrategia para decidir bien, e IA enterprise con FinOps para que adoptarla no se convierta en una factura sin control.</p>
+      <h2 data-i18n="services.h2">Tres frentes, un mismo objetivo.</h2>
+      <p data-i18n="services.p">Estrategia y PMO para decidir y ejecutar bien, IA enterprise para que se use de verdad, y FinOps para que no se convierta en una factura sin control.</p>
     </div>
     <div class="service-cards">
       <div class="service-card">
         <div class="glow"></div>
-        <div class="tag" data-i18n="service1.tag">Estrategia</div>
-        <h3 data-i18n="service1.h3">Modelos operativos</h3>
-        <p data-i18n="service1.p">Diseñamos la estructura de decisión, roles y prioridades para que tu empresa sepa exactamente cómo crecer sin perder el control.</p>
+        <div class="tag" data-i18n="service1.tag">Estrategia & PMO</div>
+        <h3 data-i18n="service1.h3">Hoja de ruta y PMO de IA</h3>
+        <p data-i18n="service1.p">Priorizamos casos de uso por impacto, definimos roles y gobernamos el programa con una PMO ligera, para que la adopción no dependa de una sola persona.</p>
       </div>
       <div class="service-card">
         <div class="glow"></div>
@@ -789,11 +855,61 @@
   </div>
 </section>
 
+<!-- ================= AUTODIAGNÓSTICO (lead magnet) ================= -->
+<section id="autodiagnostico" class="quiz-section">
+  <div class="wrap">
+    <div class="quiz-head">
+      <div class="section-label"><span class="num">05</span><span class="mono" data-i18n="quiz.label">Autodiagnóstico</span></div>
+      <h2 data-i18n="quiz.h2">¿Tu inversión en IA está rindiendo?</h2>
+      <p data-i18n="quiz.p">8 preguntas, 2 minutos. Descubre si tu empresa está en modo gasto, en piloto eterno o con la IA bajo control, y cuáles son tus puntos débiles.</p>
+    </div>
+    <form id="quiz-form" novalidate>
+      <div class="quiz-grid" id="quiz-grid"></div>
+      <div class="quiz-foot">
+        <button type="submit" class="submit-btn quiz-submit" id="quiz-submit" disabled data-i18n="quiz.submit">Ver mi resultado →</button>
+        <span class="quiz-progress" id="quiz-progress" aria-live="polite"></span>
+      </div>
+    </form>
+    <div class="quiz-result" id="quiz-result" aria-live="polite">
+      <div>
+        <div class="quiz-score" id="quiz-score"></div>
+        <div class="quiz-band" id="quiz-band"></div>
+        <p class="quiz-band-text" id="quiz-band-text"></p>
+        <div id="quiz-weak-wrap">
+          <div class="quiz-weak-title" data-i18n="quiz.weak">Tus puntos más débiles</div>
+          <ul class="quiz-weak" id="quiz-weak"></ul>
+        </div>
+      </div>
+      <div class="quiz-next">
+        <h3 data-i18n="quiz.next.h3">Revisemos tu resultado juntos</h3>
+        <p data-i18n="quiz.next.p">En 30 minutos vemos tus respuestas con tus datos reales y te llevas las 3 acciones con más impacto para tu caso. Sin coste.</p>
+        <a href="https://calendly.com/daniela-athenainnova/30min" target="_blank" rel="noopener" class="btn-primary" data-i18n="quiz.next.cta">Agendar revisión gratis →</a>
+        <form class="quiz-mail" id="quiz-mail" action="https://formspree.io/f/xppajpnr" method="POST">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+          <p data-i18n="quiz.mail.p">¿Prefieres por escrito? Déjanos tu email y te enviamos recomendaciones personalizadas en 48 h.</p>
+          <div class="form-row">
+            <div>
+              <label for="quiz-email" data-i18n="form.email">Email</label>
+              <input id="quiz-email" name="email" type="email" required>
+            </div>
+            <div>
+              <label for="quiz-company" data-i18n="form.company">Empresa</label>
+              <input id="quiz-company" name="company" type="text">
+            </div>
+          </div>
+          <button type="submit" class="submit-btn" data-i18n="quiz.mail.submit">Enviarme recomendaciones →</button>
+          <div class="quiz-mail-ok" id="quiz-mail-ok" data-i18n="quiz.mail.ok">¡Recibido! Te escribimos en menos de 48 h.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTENIDO (LinkedIn) ================= -->
 <section id="contenido" class="content-section">
   <div class="wrap">
     <div class="content-head">
-      <div class="section-label"><span class="num">05</span><span class="mono" data-i18n="content.label">Contenido</span></div>
+      <div class="section-label"><span class="num">06</span><span class="mono" data-i18n="content.label">Contenido</span></div>
       <h2 data-i18n="content.h2">Ideas que compartimos</h2>
       <p data-i18n="content.p">Fragmentos de lo que publicamos en LinkedIn — pensamiento en progreso, no un caso de estudio pulido.</p>
     </div>
@@ -809,25 +925,25 @@
 <section id="faq">
   <div class="wrap">
     <div class="content-head">
-      <div class="section-label"><span class="num">06</span><span class="mono" data-i18n="faq.label">Preguntas frecuentes</span></div>
+      <div class="section-label"><span class="num">07</span><span class="mono" data-i18n="faq.label">Preguntas frecuentes</span></div>
       <h2 data-i18n="faq.h2">Antes de que preguntes.</h2>
     </div>
     <div class="faq-list">
       <details class="faq-item">
         <summary data-i18n="faq1.q">¿Qué hace exactamente Athena Innova?</summary>
-        <p data-i18n="faq1.a">Somos una consultora de estrategia, implementación de IA enterprise y FinOps. Ayudamos a empresas ambiciosas a adoptar IA de verdad (no solo probarla) y a controlar lo que les cuesta, sin depender de que una sola persona lo recuerde todo.</p>
+        <p data-i18n="faq1.a">Somos una consultora de estrategia, implementación de IA enterprise y FinOps. Ayudamos a empresas de 50 a 500 personas a adoptar IA de verdad (no solo probarla) y a controlar lo que les cuesta, sin depender de que una sola persona lo recuerde todo.</p>
       </details>
       <details class="faq-item">
-        <summary data-i18n="faq2.q">¿Necesito ser una gran corporación para tener una PMO?</summary>
-        <p data-i18n="faq2.a">No. De hecho es al revés: la mayoría espera a ser "lo bastante grande" para organizarse, cuando el mejor momento es antes de que el caos empiece a costar dinero y clientes, no después.</p>
+        <summary data-i18n="faq2.q">¿Con qué tamaño de empresa trabajan?</summary>
+        <p data-i18n="faq2.a">Sobre todo con empresas de 50 a 500 personas que ya pagan licencias de IA (Copilot, Gemini Enterprise…) o una factura cloud relevante y necesitan saber si esa inversión está rindiendo. Es el tamaño en el que el gasto ya duele, pero todavía no hay un equipo interno dedicado a gobernarlo.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq3.q">¿Por qué IA enterprise y FinOps, y no solo consultoría de gestión tradicional?</summary>
         <p data-i18n="faq3.a">Porque implementar una herramienta de IA sin gobernar su adopción o su costo es tirar el dinero. Por eso combinamos implementación real de IA enterprise con FinOps: que tu equipo la use de verdad, y que sepas exactamente cuánto cuesta y por qué.</p>
       </details>
       <details class="faq-item">
-        <summary data-i18n="faq4.q">Mi empresa todavía no tiene "caos" — ¿es muy pronto para esto?</summary>
-        <p data-i18n="faq4.a">Es la mejor pregunta que te puedes hacer, y casi nadie se la hace a tiempo. Diseñar cómo vas a adoptar IA y a controlar su costo antes de que se vuelva caótico siempre sale más barato que arreglarlo con el negocio ya en llamas.</p>
+        <summary data-i18n="faq4.q">Todavía estamos en piloto de IA — ¿es muy pronto para esto?</summary>
+        <p data-i18n="faq4.a">Es el mejor momento. Definir cómo vas a medir la adopción y el coste antes de desplegar licencias a toda la empresa siempre sale más barato que corregirlo cuando la factura ya creció y nadie usa la herramienta.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq5.q">¿Dónde están ubicados y con quién trabajan?</summary>
@@ -835,7 +951,7 @@
       </details>
       <details class="faq-item">
         <summary data-i18n="faq6.q">¿Cuánto tarda en verse el cambio?</summary>
-        <p data-i18n="faq6.a">Depende del tamaño del caos, pero el diagnóstico inicial ya suele revelar en semanas, no meses, dónde está el mayor punto de fricción — y ahí es donde empezamos a actuar primero.</p>
+        <p data-i18n="faq6.a">Depende del punto de partida, pero el diagnóstico inicial ya suele revelar en semanas, no meses, dónde está el mayor punto de fricción — y ahí es donde empezamos a actuar primero.</p>
       </details>
     </div>
   </div>
@@ -845,9 +961,9 @@
 <section id="contacto" class="contact-section">
   <div class="wrap contact-grid">
     <div>
-      <div class="section-label"><span class="num">07</span><span class="mono" data-i18n="contact.label">Contacto</span></div>
+      <div class="section-label"><span class="num">08</span><span class="mono" data-i18n="contact.label">Contacto</span></div>
       <h2 data-i18n="contact.h2">30 minutos. Cero coste. Toda la claridad.</h2>
-      <p data-i18n="contact.p">Cuéntanos dónde está el caos hoy, o agenda directamente tu diagnóstico gratuito de 30 minutos.</p>
+      <p data-i18n="contact.p">Cuéntanos qué herramientas de IA o cloud pagáis hoy y qué te preocupa, o agenda directamente tu diagnóstico gratuito de 30 minutos.</p>
       <a href="https://calendly.com/daniela-athenainnova/30min" target="_blank" rel="noopener" class="btn-primary contact-cta" data-i18n="contact.calendly">Agenda tu diagnóstico gratis →</a>
       <div class="contact-info">
         <a href="mailto:info@athenainnova.com" class="icon-btn" aria-label="Email" title="info@athenainnova.com">
@@ -1017,16 +1133,16 @@
     "nav.faq": {es:"FAQ", en:"FAQ"},
     "nav.cta": {es:"Hablemos", en:"Let's talk"},
     "hero.eyebrow": {es:"Consultoría de estrategia, IA enterprise y FinOps", en:"Strategy, Enterprise AI & FinOps Consulting"},
-    "hero.h1": {es:'¿Caos... <br> o solo parece que <span>todo va bien?</span>', en:'Chaos... <br> or does it just <span>look fine?</span>'},
-    "hero.p": {es:"Ayudamos a founders de startups en crecimiento (8-40 personas) a saber si sus proyectos realmente avanzan. Diseñamos modelos operativos, implementamos IA enterprise de verdad y gobernamos lo que cuesta (FinOps), para que tu equipo ejecute sin depender de ti.", en:"We help founders of growing startups (8-40 people) know whether their projects are really moving forward. We design operating models, implement enterprise AI that actually gets used, and govern what it costs (FinOps), so your team can execute without depending on you."},
+    "hero.h1": {es:'¿Pagas IA... <br> o tu equipo <span>la usa de verdad?</span>', en:'You pay for AI... <br> but does your team <span>actually use it?</span>'},
+    "hero.p": {es:"Para empresas de 50 a 500 personas que ya invierten en Copilot, Gemini o cloud y no saben si les está saliendo rentable. Llevamos la IA del piloto al uso diario, gobernamos lo que cuesta (FinOps) y ordenamos la ejecución para que la inversión se note en resultados.", en:"For 50–500-person companies already investing in Copilot, Gemini or cloud who don't know whether it's paying off. We take AI from pilot to daily use, govern what it costs (FinOps) and bring order to execution so the investment shows up in results."},
     "hero.cta1": {es:"Reserva tu diagnóstico gratis →", en:"Book your free diagnostic →"},
-    "hero.cta2": {es:"Ver servicios", en:"See services"},
+    "hero.cta2": {es:"¿Tu IA es rentable? Test de 2 min", en:"Is your AI paying off? 2-min test"},
     "hero.tag1": {es:"Estrategia", en:"Strategy"},
     "hero.tag2": {es:"IA & FinOps", en:"AI & FinOps"},
     "hero.tag3": {es:"Escala", en:"Scale"},
     "about.label": {es:"Quiénes somos", en:"About us"},
     "about.h2": {es:'Construimos organizaciones que <em>escalan sin romperse.</em>', en:'We build organizations that <em>scale without breaking.</em>'},
-    "about.p1": {es:"Athena Innova es una consultora de estrategia, IA enterprise y FinOps. Trabajamos con equipos directivos que necesitan pasar de la complejidad al control: modelos operativos claros, implementación real de IA (Gemini Enterprise, Copilot y similares) y gobierno del gasto en la nube, aplicado al negocio real, no a la teoría.", en:"Athena Innova is a strategy, enterprise AI, and FinOps consultancy. We work with leadership teams who need to move from complexity to control: clear operating models, real implementation of AI (Gemini Enterprise, Copilot, and similar tools), and cloud spend governance, applied to real business, not theory."},
+    "about.p1": {es:"Athena Innova es una consultora de estrategia, IA enterprise y FinOps. Trabajamos con equipos directivos de empresas de 50 a 500 personas que necesitan pasar de la complejidad al control: modelos operativos claros, implementación real de IA (Gemini Enterprise, Copilot y similares) y gobierno del gasto en la nube, aplicado al negocio real, no a la teoría.", en:"Athena Innova is a strategy, enterprise AI, and FinOps consultancy. We work with leadership teams at 50–500-person companies who need to move from complexity to control: clear operating models, real implementation of AI (Gemini Enterprise, Copilot, and similar tools), and cloud spend governance, applied to real business, not theory."},
     "about.p2": {es:"Nuestra misión es simple: que crecer no signifique caos.", en:"Our mission is simple: growth shouldn't mean chaos."},
     "about.stat1": {es:"Año de fundación", en:"Founded"},
     "about.stat2": {es:"Equipo especializado", en:"Specialized team"},
@@ -1038,7 +1154,7 @@
     "process.label": {es:"Cómo trabajamos", en:"How we work"},
     "process.h2": {es:"La ruta de un sistema que escala.", en:"The route to a system that scales."},
     "process1.h3": {es:"Diagnóstico", en:"Diagnosis"},
-    "process1.p": {es:"Mapeamos dónde está el caos real: procesos, roles y cuellos de botella.", en:"We map where the real chaos is: processes, roles, and bottlenecks."},
+    "process1.p": {es:"Mapeamos licencias, uso real, gasto y cuellos de botella: dónde se pierde el valor de tu inversión en IA.", en:"We map licences, real usage, spend and bottlenecks: where the value of your AI investment is leaking."},
     "process2.h3": {es:"Diseño", en:"Design"},
     "process2.p": {es:"Diseñamos el modelo operativo y el plan de implementación a medida.", en:"We design the operating model and a tailored implementation plan."},
     "process3.h3": {es:"Implementación", en:"Implementation"},
@@ -1046,11 +1162,11 @@
     "process4.h3": {es:"Escala", en:"Scale"},
     "process4.p": {es:"Dejamos un sistema documentado y medible que tu equipo puede operar solo.", en:"We leave behind a documented, measurable system your team can run on its own."},
     "services.label": {es:"Servicios", en:"Services"},
-    "services.h2": {es:"Dos frentes, un mismo objetivo.", en:"Two fronts, one goal."},
-    "services.p": {es:"Estrategia para decidir bien, e IA enterprise con FinOps para que adoptarla no se convierta en una factura sin control.", en:"Strategy to decide well, and enterprise AI with FinOps so adopting it never turns into an uncontrolled bill."},
-    "service1.tag": {es:"Estrategia", en:"Strategy"},
-    "service1.h3": {es:"Modelos operativos", en:"Operating models"},
-    "service1.p": {es:"Diseñamos la estructura de decisión, roles y prioridades para que tu empresa sepa exactamente cómo crecer sin perder el control.", en:"We design the decision structure, roles, and priorities so your company knows exactly how to grow without losing control."},
+    "services.h2": {es:"Tres frentes, un mismo objetivo.", en:"Three fronts, one goal."},
+    "services.p": {es:"Estrategia y PMO para decidir y ejecutar bien, IA enterprise para que se use de verdad, y FinOps para que no se convierta en una factura sin control.", en:"Strategy and PMO to decide and execute well, enterprise AI that actually gets used, and FinOps so it never turns into an uncontrolled bill."},
+    "service1.tag": {es:"Estrategia & PMO", en:"Strategy & PMO"},
+    "service1.h3": {es:"Hoja de ruta y PMO de IA", en:"AI roadmap & PMO"},
+    "service1.p": {es:"Priorizamos casos de uso por impacto, definimos roles y gobernamos el programa con una PMO ligera, para que la adopción no dependa de una sola persona.", en:"We prioritise use cases by impact, define roles and run the programme with a lean PMO, so adoption never depends on a single person."},
     "service2.tag": {es:"IA Enterprise", en:"Enterprise AI"},
     "service2.h3": {es:"Implementación de IA enterprise", en:"Enterprise AI implementation"},
     "service2.p": {es:"Llevamos herramientas como Gemini Enterprise o Copilot desde el piloto hasta el uso real de tu equipo — sin proyectos eternos ni humo.", en:"We take tools like Gemini Enterprise or Copilot from pilot to real, everyday use by your team — no endless projects, no hype."},
@@ -1067,26 +1183,38 @@
     "result2.d": {es:"Equipos que veían la IA como un experimento ahora la usan todos los días.", en:"Teams that used to see AI as an experiment now use it every day."},
     "result3.l": {es:"Trazabilidad del gasto en IA", en:"AI spend traceability"},
     "result3.d": {es:"Cada euro invertido en IA queda documentado y justificado, no perdido en la nube.", en:"Every dollar invested in AI is documented and justified, not lost in the cloud."},
+    "nav.quiz": {es:"Autodiagnóstico", en:"Self-assessment"},
+    "quiz.label": {es:"Autodiagnóstico", en:"Self-assessment"},
+    "quiz.h2": {es:"¿Tu inversión en IA está rindiendo?", en:"Is your AI investment paying off?"},
+    "quiz.p": {es:"8 preguntas, 2 minutos. Descubre si tu empresa está en modo gasto, en piloto eterno o con la IA bajo control, y cuáles son tus puntos débiles.", en:"8 questions, 2 minutes. Find out whether your company is in spending mode, stuck in an endless pilot, or has AI under control, and where your weak spots are."},
+    "quiz.submit": {es:"Ver mi resultado →", en:"See my result →"},
+    "quiz.weak": {es:"Tus puntos más débiles", en:"Your weakest areas"},
+    "quiz.next.h3": {es:"Revisemos tu resultado juntos", en:"Let's review your result together"},
+    "quiz.next.p": {es:"En 30 minutos vemos tus respuestas con tus datos reales y te llevas las 3 acciones con más impacto para tu caso. Sin coste.", en:"In 30 minutes we go through your answers with your real data and you leave with the 3 highest-impact actions for your case. Free of charge."},
+    "quiz.next.cta": {es:"Agendar revisión gratis →", en:"Book a free review →"},
+    "quiz.mail.p": {es:"¿Prefieres por escrito? Déjanos tu email y te enviamos recomendaciones personalizadas en 48 h.", en:"Prefer it in writing? Leave your email and we'll send you tailored recommendations within 48 h."},
+    "quiz.mail.submit": {es:"Enviarme recomendaciones →", en:"Send me recommendations →"},
+    "quiz.mail.ok": {es:"¡Recibido! Te escribimos en menos de 48 h.", en:"Got it! We'll get back to you within 48 h."},
     "content.label": {es:"Contenido", en:"Content"},
     "content.h2": {es:"Ideas que compartimos", en:"Ideas we share"},
     "content.p": {es:"Fragmentos de lo que publicamos en LinkedIn — pensamiento en progreso, no un caso de estudio pulido.", en:"Snapshots of what we publish on LinkedIn — thinking in progress, not a polished case study."},
     "faq.label": {es:"Preguntas frecuentes", en:"FAQ"},
     "faq.h2": {es:"Antes de que preguntes.", en:"Before you ask."},
     "faq1.q": {es:"¿Qué hace exactamente Athena Innova?", en:"What does Athena Innova actually do?"},
-    "faq1.a": {es:"Somos una consultora de estrategia, implementación de IA enterprise y FinOps. Ayudamos a empresas ambiciosas a adoptar IA de verdad (no solo probarla) y a controlar lo que les cuesta, sin depender de que una sola persona lo recuerde todo.", en:"We're a strategy, enterprise AI implementation, and FinOps consultancy. We help ambitious companies actually adopt AI (not just pilot it) and control what it costs, without depending on one person remembering everything."},
-    "faq2.q": {es:"¿Necesito ser una gran corporación para tener una PMO?", en:"Do I need to be a big corporation to have a PMO?"},
-    "faq2.a": {es:"No. De hecho es al revés: la mayoría espera a ser \"lo bastante grande\" para organizarse, cuando el mejor momento es antes de que el caos empiece a costar dinero y clientes, no después.", en:"No. It's actually the opposite: most companies wait until they're \"big enough\" to get organized, when the best time is before the chaos starts costing money and clients, not after."},
+    "faq1.a": {es:"Somos una consultora de estrategia, implementación de IA enterprise y FinOps. Ayudamos a empresas de 50 a 500 personas a adoptar IA de verdad (no solo probarla) y a controlar lo que les cuesta, sin depender de que una sola persona lo recuerde todo.", en:"We're a strategy, enterprise AI implementation, and FinOps consultancy. We help 50–500-person companies actually adopt AI (not just pilot it) and control what it costs, without depending on one person remembering everything."},
+    "faq2.q": {es:"¿Con qué tamaño de empresa trabajan?", en:"What size of company do you work with?"},
+    "faq2.a": {es:"Sobre todo con empresas de 50 a 500 personas que ya pagan licencias de IA (Copilot, Gemini Enterprise…) o una factura cloud relevante y necesitan saber si esa inversión está rindiendo. Es el tamaño en el que el gasto ya duele, pero todavía no hay un equipo interno dedicado a gobernarlo.", en:"Mostly 50–500-person companies that already pay for AI licences (Copilot, Gemini Enterprise…) or a significant cloud bill and need to know whether that investment is paying off. It's the size where the spend already hurts, but there's no in-house team dedicated to governing it yet."},
     "faq3.q": {es:"¿Por qué IA enterprise y FinOps, y no solo consultoría de gestión tradicional?", en:"Why enterprise AI and FinOps, and not just traditional management consulting?"},
     "faq3.a": {es:"Porque implementar una herramienta de IA sin gobernar su adopción o su costo es tirar el dinero. Por eso combinamos implementación real de IA enterprise con FinOps: que tu equipo la use de verdad, y que sepas exactamente cuánto cuesta y por qué.", en:"Because rolling out an AI tool without governing its adoption or its cost is throwing money away. That's why we combine real enterprise AI implementation with FinOps: your team actually uses it, and you know exactly what it costs and why."},
-    "faq4.q": {es:"Mi empresa todavía no tiene \"caos\" — ¿es muy pronto para esto?", en:"My company doesn't have \"chaos\" yet — is it too early for this?"},
-    "faq4.a": {es:"Es la mejor pregunta que te puedes hacer, y casi nadie se la hace a tiempo. Diseñar cómo vas a adoptar IA y a controlar su costo antes de que se vuelva caótico siempre sale más barato que arreglarlo con el negocio ya en llamas.", en:"It's the best question you can ask, and almost no one asks it in time. Designing how you'll adopt AI and control its cost before it turns chaotic is always cheaper than fixing it once the business is already on fire."},
+    "faq4.q": {es:"Todavía estamos en piloto de IA — ¿es muy pronto para esto?", en:"We're still piloting AI — is it too early for this?"},
+    "faq4.a": {es:"Es el mejor momento. Definir cómo vas a medir la adopción y el coste antes de desplegar licencias a toda la empresa siempre sale más barato que corregirlo cuando la factura ya creció y nadie usa la herramienta.", en:"It's the best time. Defining how you'll measure adoption and cost before rolling licences out company-wide is always cheaper than fixing it once the bill has grown and nobody uses the tool."},
     "faq5.q": {es:"¿Dónde están ubicados y con quién trabajan?", en:"Where are you based and who do you work with?"},
     "faq5.a": {es:"Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa y Latinoamérica — con un pie en cada región para entender ambos contextos de cerca.", en:"Based in Spain (Madrid and Valencia) with a team in Santiago, Chile, we work with companies across Spain, Europe and Latin America — with a foot in each region to understand both contexts closely."},
     "faq6.q": {es:"¿Cuánto tarda en verse el cambio?", en:"How long until we see change?"},
-    "faq6.a": {es:"Depende del tamaño del caos, pero el diagnóstico inicial ya suele revelar en semanas, no meses, dónde está el mayor punto de fricción — y ahí es donde empezamos a actuar primero.", en:"It depends on the size of the chaos, but the initial diagnosis usually reveals within weeks, not months, where the biggest friction point is — and that's where we start acting first."},
+    "faq6.a": {es:"Depende del punto de partida, pero el diagnóstico inicial ya suele revelar en semanas, no meses, dónde está el mayor punto de fricción — y ahí es donde empezamos a actuar primero.", en:"It depends on where you start, but the initial diagnosis usually reveals within weeks, not months, where the biggest friction point is — and that's where we start acting first."},
     "contact.label": {es:"Contacto", en:"Contact"},
     "contact.h2": {es:"30 minutos. Cero coste. Toda la claridad.", en:"30 minutes. Zero cost. Total clarity."},
-    "contact.p": {es:"Cuéntanos dónde está el caos hoy, o agenda directamente tu diagnóstico gratuito de 30 minutos.", en:"Tell us where the chaos is today, or book your free 30-minute diagnostic directly."},
+    "contact.p": {es:"Cuéntanos qué herramientas de IA o cloud pagáis hoy y qué te preocupa, o agenda directamente tu diagnóstico gratuito de 30 minutos.", en:"Tell us which AI or cloud tools you pay for today and what worries you, or book your free 30-minute diagnostic directly."},
     "contact.calendly": {es:"Agenda tu diagnóstico gratis →", en:"Book your free diagnostic →"},
     "form.name": {es:"Nombre", en:"Name"},
     "form.company": {es:"Empresa", en:"Company"},
@@ -1099,11 +1227,11 @@
   const pageMeta = {
     es: {
       title: "Athena Innova — Estrategia. IA. Escala.",
-      description: "Ayudamos a empresas ambiciosas a implementar IA enterprise de verdad y a controlar lo que les cuesta, con estrategia como base y FinOps como garantía."
+      description: "Para empresas de 50 a 500 personas que ya pagan Copilot, Gemini o cloud: llevamos la IA del piloto al uso real y controlamos lo que cuesta con FinOps. Diagnóstico gratuito."
     },
     en: {
       title: "Athena Innova — Strategy. AI. Scale.",
-      description: "We help ambitious companies actually adopt enterprise AI and control what it costs, with strategy as the foundation and FinOps as the safeguard."
+      description: "For 50–500-person companies already paying for Copilot, Gemini or cloud: we take AI from pilot to real use and keep its cost under control with FinOps. Free diagnostic."
     }
   };
 
@@ -1119,6 +1247,130 @@
     const langBtn = document.getElementById('lang-toggle');
     if(langBtn) langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
     currentLang = lang;
+    renderQuiz(lang);
+  }
+
+  // ---------- Autodiagnóstico de IA (lead magnet) ----------
+  // Cada respuesta puntúa 2 (sí), 1 (a medias) o 0 (no). Máximo 16.
+  const quiz = {
+    options: {es:["Sí","A medias","No"], en:["Yes","Partly","No"]},
+    questions: [
+      {area:{es:"Adopción medida", en:"Measured adoption"},
+       q:{es:"¿Sabes cuántas de las licencias de IA que pagáis se usan cada semana?", en:"Do you know how many of the AI licences you pay for are used every week?"}},
+      {area:{es:"Responsable de la adopción", en:"Adoption ownership"},
+       q:{es:"¿Hay una persona o comité responsable de la adopción de IA, con objetivos?", en:"Is there a person or committee accountable for AI adoption, with goals?"}},
+      {area:{es:"Casos de uso priorizados", en:"Prioritised use cases"},
+       q:{es:"¿Tenéis los casos de uso de IA priorizados por impacto en el negocio?", en:"Are your AI use cases prioritised by business impact?"}},
+      {area:{es:"Formación práctica", en:"Hands-on training"},
+       q:{es:"¿El equipo ha recibido formación práctica sobre sus tareas reales?", en:"Has the team had hands-on training on their real day-to-day tasks?"}},
+      {area:{es:"Visibilidad del gasto", en:"Spend visibility"},
+       q:{es:"¿Sabes cuánto gastáis al mes en IA y cloud, por área o proyecto?", en:"Do you know your monthly AI and cloud spend, by team or project?"}},
+      {area:{es:"Control del gasto", en:"Spend control"},
+       q:{es:"¿Tenéis presupuestos o alertas que avisen si el gasto se dispara?", en:"Do you have budgets or alerts that warn you if spend spikes?"}},
+      {area:{es:"Impacto medido", en:"Measured impact"},
+       q:{es:"¿Medís algún resultado atribuible a la IA (horas ahorradas, tiempo de ciclo, ventas)?", en:"Do you measure any outcome attributable to AI (hours saved, cycle time, sales)?"}},
+      {area:{es:"Política de uso y datos", en:"Usage & data policy"},
+       q:{es:"¿Hay una política clara de uso y datos (qué se puede subir a la IA y qué no)?", en:"Is there a clear usage and data policy (what can and can't be shared with AI)?"}}
+    ],
+    bands: [
+      {min:12, name:{es:"IA bajo control", en:"AI under control"},
+       text:{es:"Tienes una base sólida. El siguiente paso es optimizar coste por usuario y escalar los casos de uso que ya funcionan a más áreas.", en:"You have a solid foundation. The next step is optimising cost per user and scaling the use cases that already work to more teams."}},
+      {min:7, name:{es:"IA en piloto eterno", en:"Stuck in an endless pilot"},
+       text:{es:"Hay piezas en marcha, pero sin medición ni gobierno la adopción se estanca y el coste sigue creciendo. Es el punto donde más valor se pierde.", en:"Some pieces are in place, but without measurement and governance adoption stalls while cost keeps growing. This is where most value is lost."}},
+      {min:0, name:{es:"IA en modo gasto", en:"AI in spending mode"},
+       text:{es:"Estás pagando IA sin saber si rinde. Riesgo alto de licencias ociosas y facturas sin control. La buena noticia: los primeros ajustes suelen ser rápidos.", en:"You're paying for AI without knowing whether it pays off. High risk of idle licences and runaway bills. The good news: the first fixes are usually quick."}}
+    ]
+  };
+  const quizAnswers = {};
+  let quizStarted = false;
+  let quizResult = null;
+
+  function renderQuiz(lang){
+    const grid = document.getElementById('quiz-grid');
+    if(!grid) return;
+    grid.innerHTML = quiz.questions.map((item, i)=>{
+      const opts = quiz.options[lang].map((label, j)=>{
+        const value = 2 - j;
+        const id = `q${i}-${value}`;
+        const checked = quizAnswers[i] === value ? ' checked' : '';
+        return `<input type="radio" name="q${i}" id="${id}" value="${value}"${checked}><label for="${id}">${label}</label>`;
+      }).join('');
+      const answered = quizAnswers[i] !== undefined ? ' answered' : '';
+      return `<fieldset class="quiz-q${answered}"><legend><span class="qn">${String(i+1).padStart(2,'0')}</span>${item.q[lang]}</legend><div class="quiz-opts">${opts}</div></fieldset>`;
+    }).join('');
+    updateQuizProgress(lang);
+    if(quizResult) showQuizResult(lang);
+  }
+
+  function updateQuizProgress(lang){
+    const n = Object.keys(quizAnswers).length, total = quiz.questions.length;
+    document.getElementById('quiz-progress').textContent =
+      lang === 'es' ? `${n}/${total} respondidas` : `${n}/${total} answered`;
+    document.getElementById('quiz-submit').disabled = n < total;
+  }
+
+  function computeQuizResult(){
+    const score = Object.values(quizAnswers).reduce((a,b)=>a+b, 0);
+    const band = quiz.bands.find(b => score >= b.min);
+    // puntos débiles: primero los "No", luego los "A medias"; máximo 3
+    const weak = quiz.questions.map((q,i)=>({i, v:quizAnswers[i]}))
+      .filter(x => x.v < 2).sort((a,b)=>a.v-b.v).slice(0,3).map(x => x.i);
+    return {score, band, weak};
+  }
+
+  function showQuizResult(lang){
+    const {score, band, weak} = quizResult;
+    const max = quiz.questions.length * 2;
+    document.getElementById('quiz-score').innerHTML = `${Math.round(score/max*100)}<small>/100</small>`;
+    document.getElementById('quiz-band').textContent = band.name[lang];
+    document.getElementById('quiz-band-text').textContent = band.text[lang];
+    document.getElementById('quiz-weak').innerHTML = weak.map(i => `<li>${quiz.questions[i].area[lang]}</li>`).join('');
+    document.getElementById('quiz-weak-wrap').style.display = weak.length ? '' : 'none';
+    document.getElementById('quiz-result').classList.add('show');
+  }
+
+  const quizForm = document.getElementById('quiz-form');
+  if(quizForm){
+    quizForm.addEventListener('change', e=>{
+      if(e.target.type !== 'radio') return;
+      const i = Number(e.target.name.slice(1));
+      quizAnswers[i] = Number(e.target.value);
+      e.target.closest('.quiz-q').classList.add('answered');
+      if(!quizStarted){ quizStarted = true; track('quiz_start', {language: currentLang}); }
+      updateQuizProgress(currentLang);
+    });
+    quizForm.addEventListener('submit', e=>{
+      e.preventDefault();
+      if(Object.keys(quizAnswers).length < quiz.questions.length) return;
+      quizResult = computeQuizResult();
+      showQuizResult(currentLang);
+      track('quiz_complete', {score: quizResult.score, band: quizResult.band.name.es, language: currentLang});
+      document.getElementById('quiz-result').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  }
+
+  const quizMail = document.getElementById('quiz-mail');
+  if(quizMail){
+    quizMail.addEventListener('submit', async e=>{
+      e.preventDefault();
+      if(!quizMail.reportValidity() || !quizResult) return;
+      const data = new FormData(quizMail);
+      data.append('_subject', `Autodiagnóstico IA: ${quizResult.band.name.es} (${quizResult.score}/16)`);
+      data.append('origen', 'autodiagnostico');
+      data.append('puntuacion', `${quizResult.score}/16`);
+      data.append('resultado', quizResult.band.name.es);
+      data.append('puntos_debiles', quizResult.weak.map(i => quiz.questions[i].area.es).join(', '));
+      data.append('respuestas', quiz.questions.map((q,i)=>`${i+1}. ${q.q.es} → ${quiz.options.es[2-quizAnswers[i]]}`).join('\n'));
+      try{
+        const res = await fetch(quizMail.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
+        if(!res.ok) throw new Error(res.status);
+        quizMail.querySelectorAll('input, button').forEach(el => el.disabled = true);
+        document.getElementById('quiz-mail-ok').style.display = 'block';
+        track('generate_lead', {form_id: 'quiz-mail', band: quizResult.band.name.es, language: currentLang});
+      }catch(err){
+        quizMail.submit(); // si falla el envío en segundo plano, envío normal del formulario
+      }
+    });
   }
 
   let currentLang = 'es';
@@ -1145,7 +1397,7 @@
     if(href.includes('calendly.com')){
       track('calendly_click', {
         link_url: href,
-        location: link.closest('#contacto') ? 'seccion_contacto' : 'otro',
+        location: link.closest('#contacto') ? 'seccion_contacto' : link.closest('#autodiagnostico') ? 'autodiagnostico' : 'otro',
         language: currentLang
       });
     } else if(href.startsWith('mailto:')){
