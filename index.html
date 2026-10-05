@@ -891,7 +891,7 @@
     <h1 data-i18n="hero.h1">¿Caos... <br> o solo <span>parece que todo va bien?</span></h1>
     <p data-i18n="hero.p">Para empresas de tecnología en crecimiento cuyos proyectos se retrasan sin que nadie sepa por qué. Dirigimos la ejecución apoyados en IA y agentes que mantienen el estado al día, y llevamos tus proyectos de IA y cloud del piloto al uso real.</p>
     <div class="hero-ctas">
-      <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Reserva tu diagnóstico gratis →</a>
+      <a href="https://calendly.com/daniela-athenainnova/30min" target="_blank" rel="noopener" class="btn-primary" data-i18n="hero.cta1">Reserva tu diagnóstico gratis →</a>
       <a href="#autodiagnostico" class="btn-ghost" data-i18n="hero.cta2">¿Tus proyectos van bien? Test de 2 min</a>
     </div>
     <div class="hero-tagline">
@@ -1664,7 +1664,7 @@
     } else if(href.includes('calendly.com')){
       track('calendly_click', {
         link_url: href,
-        location: link.closest('#contacto') ? 'seccion_contacto' : link.closest('#autodiagnostico') ? 'autodiagnostico' : link.closest('#faq') ? 'faq' : link.closest('#sticky-cta') ? 'barra_movil' : 'otro',
+        location: link.closest('.hero') ? 'hero' : link.closest('#contacto') ? 'seccion_contacto' : link.closest('#autodiagnostico') ? 'autodiagnostico' : link.closest('#faq') ? 'faq' : link.closest('#sticky-cta') ? 'barra_movil' : 'otro',
         language: currentLang
       });
     } else if(href.startsWith('mailto:')){
