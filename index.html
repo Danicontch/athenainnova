@@ -781,22 +781,23 @@
     transition:border-color .25s, transform .25s;
   }
   .partner:hover{border-color:rgba(94,234,212,0.42); transform:translateY(-3px);}
-  .partner-photo{position:relative; aspect-ratio:1/1; overflow:hidden; background:var(--teal-900);}
-  .partner-photo img{width:100%; height:100%; object-fit:cover; object-position:50% 22%; display:block;}
-  @media (max-width:860px){ .partner-photo{aspect-ratio:4/3;} }
-  .partner-photo::after{
-    content:''; position:absolute; inset:0;
-    background:linear-gradient(to bottom, transparent 55%, rgba(4,33,31,0.85) 100%);
+  .partner-head{display:flex; align-items:center; gap:16px; padding:24px 24px 0;}
+  .partner-photo{
+    width:88px; height:88px; flex-shrink:0;
+    border-radius:14px; overflow:hidden; background:var(--teal-900);
+    border:1px solid rgba(255,255,255,0.14);
   }
+  .partner-photo img{width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block;}
+  .partner-ident{min-width:0;}
   .partner-place{
-    position:absolute; left:16px; bottom:14px; z-index:2;
-    font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.1em;
+    margin-top:7px;
+    font-family:'IBM Plex Mono',monospace; font-size:0.66rem; letter-spacing:0.1em;
     text-transform:uppercase; color:var(--turquoise-light);
     display:flex; align-items:center; gap:7px;
   }
-  .partner-place::before{content:''; width:5px; height:5px; border-radius:50%; background:var(--turquoise); box-shadow:0 0 7px var(--turquoise);}
-  .partner-body{padding:24px 24px 22px; display:flex; flex-direction:column; flex-grow:1;}
-  .partner-body h3{font-size:1.3rem; font-weight:600; color:#fff;}
+  .partner-place::before{content:''; width:5px; height:5px; border-radius:50%; background:var(--turquoise); box-shadow:0 0 7px var(--turquoise); flex-shrink:0;}
+  .partner-body{padding:18px 24px 22px; display:flex; flex-direction:column; flex-grow:1;}
+  .partner-body h3{font-size:1.18rem; font-weight:600; color:#fff;}
   .partner-role{
     margin-top:5px; font-family:'IBM Plex Mono',monospace; font-size:0.7rem;
     letter-spacing:0.08em; text-transform:uppercase; color:var(--turquoise);
@@ -815,6 +816,23 @@
   }
   .partner-li svg{width:15px; height:15px; color:#5EEAD4;}
   .partner-li:hover{color:var(--turquoise-light);}
+  .team-network{
+    position:relative; z-index:2; margin-top:30px;
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px; padding:22px 24px;
+    background:rgba(255,255,255,0.035);
+  }
+  .team-network .tn-label{
+    font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--turquoise); margin-bottom:12px;
+  }
+  .team-network p{color:rgba(244,250,249,0.68); font-size:0.95rem; line-height:1.7; max-width:620px;}
+  .tn-chips{margin-top:16px; display:flex; flex-wrap:wrap; gap:8px;}
+  .tn-chips span{
+    font-size:0.76rem; color:rgba(244,250,249,0.8);
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.13);
+    border-radius:999px; padding:5px 13px;
+  }
   .team-note{
     position:relative; z-index:2; margin-top:34px;
     color:rgba(244,250,249,0.72); font-size:0.98rem; line-height:1.7; max-width:620px;
@@ -1048,14 +1066,17 @@
     <div class="team-grid">
 
       <article class="partner">
-        <div class="partner-photo">
-          <img src="/equipo-daniela.jpg" width="640" height="800" loading="lazy"
-               alt="Daniela Contreras, socia fundadora de Athena Innova, dirección de proyectos de tecnología">
-          <span class="partner-place" data-i18n="team1.place">Valencia, España</span>
+        <div class="partner-head">
+          <div class="partner-photo">
+            <img src="/equipo-daniela.jpg" width="640" height="640" loading="lazy" alt="Daniela Contreras, socia fundadora de Athena Innova, dirección de proyectos de tecnología">
+          </div>
+          <div class="partner-ident">
+            <h3>Daniela Contreras</h3>
+            <div class="partner-role" data-i18n="team1.role">Socia fundadora · Dirección de proyectos</div>
+            <span class="partner-place" data-i18n="team1.place">Valencia, España</span>
+          </div>
         </div>
         <div class="partner-body">
-          <h3>Daniela Contreras</h3>
-          <div class="partner-role" data-i18n="team1.role">Socia fundadora · Dirección de proyectos</div>
           <p data-i18n="team1.bio">Dirigió la PMO de Axmos, partner de Google Cloud en Latinoamérica, gobernando la entrega de proyectos cloud. Certificada PMP® por el Project Management Institute. En Athena Innova lleva la práctica de dirección de proyectos de tecnología e IA, y diseña los agentes que mantienen al día el estado, los riesgos y el seguimiento de cada proyecto.</p>
           <div class="partner-creds"><span>PMP®</span><span data-i18n="team1.cred2">Ex-PMO Director, Axmos</span><span data-i18n="team1.cred3">Cloud &amp; IA</span></div>
           <a class="partner-li" href="https://www.linkedin.com/in/headpmodanielacontreras/" target="_blank" rel="noopener">
@@ -1065,14 +1086,17 @@
       </article>
 
       <article class="partner">
-        <div class="partner-photo">
-          <img src="/equipo-prima.jpg" width="640" height="800" loading="lazy"
-               alt="Paula Zarricueta, socia de Athena Innova en Chile, gestión de proyectos de infraestructura pública">
-          <span class="partner-place" data-i18n="team2.place">Santiago, Chile</span>
+        <div class="partner-head">
+          <div class="partner-photo">
+            <img src="/equipo-prima.jpg" width="640" height="640" loading="lazy" alt="Paula Zarricueta, socia de Athena Innova en Chile, gestión de proyectos de infraestructura pública">
+          </div>
+          <div class="partner-ident">
+            <h3>Paula Zarricueta</h3>
+            <div class="partner-role" data-i18n="team2.role">Socia · Operaciones Chile</div>
+            <span class="partner-place" data-i18n="team2.place">Santiago, Chile</span>
+          </div>
         </div>
         <div class="partner-body">
-          <h3>Paula Zarricueta</h3>
-          <div class="partner-role" data-i18n="team2.role">Socia · Operaciones Chile</div>
           <p data-i18n="team2.bio">Ingeniera Civil Industrial con más de 14 años en planificación, control de gestión e inversiones de infraestructura pública. En la Dirección de Obras Hidráulicas del Ministerio de Obras Públicas de Chile gestionó carteras de inversión de escala nacional: licitaciones, control financiero y seguimiento presupuestario en proyectos donde un retraso tiene consecuencias reales. Lidera la operación de Athena Innova en Chile.</p>
           <div class="partner-creds"><span data-i18n="team2.cred1">Ingeniera Civil Industrial</span><span data-i18n="team2.cred2">+14 años de experiencia</span><span data-i18n="team2.cred3">Control de inversiones</span></div>
           <a class="partner-li" href="https://www.linkedin.com/in/paula-zarricueta-carmona-5149a82a/" target="_blank" rel="noopener">
@@ -1082,7 +1106,17 @@
       </article>
 
     </div>
-    <p class="team-note" data-i18n="team.note">Trabajas siempre con una socia. Nadie te vende el proyecto para después dejarte en manos de un equipo junior que aún está aprendiendo tu negocio.</p>
+    <div class="team-network">
+      <div class="tn-label" data-i18n="network.label">Red de colaboradores</div>
+      <p data-i18n="network.p">Para la ejecución sumamos especialistas de nuestra red según lo que pida cada proyecto, sin que tengas que contratarlos tú ni cargar con una estructura fija.</p>
+      <div class="tn-chips">
+        <span data-i18n="network.c1">Ingeniería cloud</span>
+        <span data-i18n="network.c2">Datos e integración</span>
+        <span data-i18n="network.c3">Seguridad</span>
+        <span data-i18n="network.c4">Desarrollo</span>
+      </div>
+    </div>
+    <p class="team-note" data-i18n="team.note">Una socia dirige siempre tu proyecto. No te lo vende una persona para que luego lo lleve otra que acaba de llegar.</p>
   </div>
 </section>
 
@@ -1552,7 +1586,13 @@
     "team2.cred2": {es:"+14 años de experiencia", en:"14+ years of experience"},
     "team2.cred3": {es:"Control de inversiones", en:"Investment control"},
     "team.li": {es:"Ver perfil", en:"View profile"},
-    "team.note": {es:"Trabajas siempre con una socia. Nadie te vende el proyecto para después dejarte en manos de un equipo junior que aún está aprendiendo tu negocio.", en:"You always work with a partner. Nobody sells you the project and then hands you to a junior team still learning your business."},
+    "network.label": {es:"Red de colaboradores", en:"Partner network"},
+    "network.p": {es:"Para la ejecución sumamos especialistas de nuestra red según lo que pida cada proyecto, sin que tengas que contratarlos tú ni cargar con una estructura fija.", en:"For delivery we bring in specialists from our network as each project requires, without you having to hire them or carry a fixed structure."},
+    "network.c1": {es:"Ingeniería cloud", en:"Cloud engineering"},
+    "network.c2": {es:"Datos e integración", en:"Data & integration"},
+    "network.c3": {es:"Seguridad", en:"Security"},
+    "network.c4": {es:"Desarrollo", en:"Development"},
+    "team.note": {es:"Una socia dirige siempre tu proyecto. No te lo vende una persona para que luego lo lleve otra que acaba de llegar.", en:"A partner always leads your project. It isn't sold to you by one person and then handed to someone who just arrived."},
     "process.label": {es:"Cómo trabajamos", en:"How we work"},
     "process.h2": {es:"Cómo ordenamos la gestión de tus proyectos.", en:"How we bring order to your project management."},
     "process1.h3": {es:"Diagnóstico", en:"Diagnosis"},
