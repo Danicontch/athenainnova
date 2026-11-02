@@ -29,11 +29,6 @@
     "addressRegion": "Comunidad Valenciana",
     "addressCountry": "ES"
   },
-  "location": [
-    {"@type": "Place", "name": "Valencia, España"},
-    {"@type": "Place", "name": "Madrid, España"},
-    {"@type": "Place", "name": "Santiago, Chile"}
-  ],
   "areaServed": [
     {
       "@type": "Country",
@@ -42,6 +37,10 @@
     {
       "@type": "Country",
       "name": "Chile"
+    },
+    {
+      "@type": "Country",
+      "name": "Estados Unidos"
     },
     {
       "@type": "Place",
@@ -230,7 +229,7 @@
       "name": "¿Dónde están ubicados y con quién trabajan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa y Latinoamérica — con un pie en cada región para entender ambos contextos de cerca."
+        "text": "Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa, Latinoamérica y EE. UU. — con un pie en cada región para entender ambos contextos de cerca."
       }
     },
     {
@@ -568,7 +567,7 @@
     border-radius:999px;
     padding:6px 14px;
   }
-  .location-pill::before{content:'📍'; font-size:0.75rem;}
+  .location-pill::before{content:'🌎'; font-size:0.75rem;}
 
   /* ---------- PROCESS (route) ---------- */
   .process-section{background:var(--paper);}
@@ -1118,7 +1117,7 @@
       <div class="section-label"><span class="num">01</span><span class="mono" data-i18n="about.label">Quiénes somos</span></div>
       <h2 data-i18n="about.h2">Dirección de proyectos <em>reforzada con IA y agentes.</em></h2>
       <p class="about-text" data-i18n="about.p1">Athena Innova es una consultora de dirección de proyectos para empresas de tecnología. Hacemos dos cosas que van juntas: dirigimos tus proyectos de IA y cloud para que lleguen a producir resultados, y usamos IA y agentes dentro de la propia gestión para que el seguimiento no se coma las horas de tu equipo.</p>
-      <p class="about-text" data-i18n="about.p2">Trabajamos desde Valencia y Madrid con empresas de toda España, Europa y Latinoamérica. Nuestra misión es simple: que crecer no signifique caos.</p>
+      <p class="about-text" data-i18n="about.p2">Trabajamos desde Valencia y Madrid con empresas de toda España, Europa, Latinoamérica y EE. UU. Nuestra misión es simple: que crecer no signifique caos.</p>
     </div>
     <div class="stat-grid">
       <div class="stat"><div class="n"><span class="accent">2023</span></div><div class="l" data-i18n="about.stat1">Año de fundación</div></div>
@@ -1127,10 +1126,11 @@
       <div class="stat"><div class="n">100%</div><div class="l" data-i18n="about.stat4">Foco en ejecución</div></div>
     </div>
     <div class="locations-row">
-      <span class="locations-label" data-i18n="about.locations.label">Presencia en</span>
-      <span class="location-pill" data-i18n="about.loc1">Madrid, España</span>
-      <span class="location-pill" data-i18n="about.loc2">Valencia, España</span>
-      <span class="location-pill" data-i18n="about.loc3">Santiago, Chile</span>
+      <span class="locations-label" data-i18n="about.locations.label">Trabajamos con empresas en</span>
+      <span class="location-pill" data-i18n="about.loc1">España</span>
+      <span class="location-pill" data-i18n="about.loc2">Europa</span>
+      <span class="location-pill" data-i18n="about.loc3">Latinoamérica</span>
+      <span class="location-pill" data-i18n="about.loc4">EE. UU.</span>
     </div>
   </div>
 </section>
@@ -1511,7 +1511,7 @@
       </details>
       <details class="faq-item">
         <summary data-i18n="faq5.q">¿Dónde están ubicados y con quién trabajan?</summary>
-        <p data-i18n="faq5.a">Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa y Latinoamérica — con un pie en cada región para entender ambos contextos de cerca.</p>
+        <p data-i18n="faq5.a">Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa, Latinoamérica y EE. UU. — con un pie en cada región para entender ambos contextos de cerca.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq7.q">¿Qué es exactamente una PMO externa y cuándo compensa?</summary>
@@ -1720,14 +1720,15 @@
     "about.label": {es:"Quiénes somos", en:"About us"},
     "about.h2": {es:'Dirección de proyectos <em>reforzada con IA y agentes.</em>', en:'Project delivery <em>powered by AI and agents.</em>'},
     "about.p1": {es:"Athena Innova es una consultora de dirección de proyectos para empresas de tecnología. Hacemos dos cosas que van juntas: dirigimos tus proyectos de IA y cloud para que lleguen a producir resultados, y usamos IA y agentes dentro de la propia gestión para que el seguimiento no se coma las horas de tu equipo.", en:"Athena Innova is a project delivery consultancy for technology companies. We do two things that belong together: we run your AI and cloud projects so they actually produce results, and we use AI and agents inside the management itself so follow-up stops eating your team's hours."},
-    "about.p2": {es:"Trabajamos desde Valencia y Madrid con empresas de toda España, Europa y Latinoamérica. Nuestra misión es simple: que crecer no signifique caos.", en:"We work from Valencia and Madrid with companies across Spain, Europe and Latin America. Our mission is simple: growth shouldn't mean chaos."},
+    "about.p2": {es:"Trabajamos desde Valencia y Madrid con empresas de toda España, Europa, Latinoamérica y EE. UU. Nuestra misión es simple: que crecer no signifique caos.", en:"We work from Valencia and Madrid with companies across Spain, Europe, Latin America and the United States. Our mission is simple: growth shouldn't mean chaos."},
     "about.stat1": {es:"Año de fundación", en:"Founded"},
     "about.stat2": {es:"Socios + red de colaboradores", en:"Partners + network of specialists"},
     "about.stat4": {es:"Foco en ejecución", en:"Execution-focused"},
-    "about.locations.label": {es:"Presencia en", en:"Presence in"},
-    "about.loc1": {es:"Madrid, España", en:"Madrid, Spain"},
-    "about.loc2": {es:"Valencia, España", en:"Valencia, Spain"},
-    "about.loc3": {es:"Santiago, Chile", en:"Santiago, Chile"},
+    "about.locations.label": {es:"Trabajamos con empresas en", en:"We work with companies in"},
+    "about.loc1": {es:"España", en:"Spain"},
+    "about.loc2": {es:"Europa", en:"Europe"},
+    "about.loc3": {es:"Latinoamérica", en:"Latin America"},
+    "about.loc4": {es:"EE. UU.", en:"United States"},
     "nav.team": {es:"Equipo", en:"Team"},
     "team.h2": {es:'Dos socios. <em>Dos mercados.</em>', en:'Two partners. <em>Two markets.</em>'},
     "team.label": {es:"Equipo", en:"Team"},
@@ -1867,7 +1868,7 @@
     "faq8.q": {es:"¿Qué significa que usáis agentes de IA en la gestión de proyectos?", en:"What does it mean that you use AI agents in project management?"},
     "faq8.a": {es:"Que parte del trabajo repetitivo de la PMO lo hace un agente, no una persona: preparar el estado semanal a partir de lo que pasó, mantener el registro de riesgos al día y perseguir las acciones abiertas. Tú y tu equipo seguís decidiendo; lo que desaparece es el tiempo que se iba en recopilar y recordar.", en:"That part of the repetitive PMO work is done by an agent, not a person: preparing the weekly status from what actually happened, keeping the risk log current and chasing open actions. You and your team still decide; what disappears is the time spent collecting and remembering."},
     "faq5.q": {es:"¿Dónde están ubicados y con quién trabajan?", en:"Where are you based and who do you work with?"},
-    "faq5.a": {es:"Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa y Latinoamérica — con un pie en cada región para entender ambos contextos de cerca.", en:"Based in Spain (Madrid and Valencia) with a team in Santiago, Chile, we work with companies across Spain, Europe and Latin America — with a foot in each region to understand both contexts closely."},
+    "faq5.a": {es:"Con sede en España (Madrid y Valencia) y equipo en Santiago de Chile, trabajamos con empresas en España, Europa, Latinoamérica y EE. UU. — con un pie en cada región para entender ambos contextos de cerca.", en:"Based in Spain (Madrid and Valencia) with a team in Santiago, Chile, we work with companies across Spain, Europe, Latin America and the United States — with a foot in each region to understand both contexts closely."},
     "faq6.q": {es:"¿Cuánto tarda en verse el cambio?", en:"How long until we see change?"},
     "faq6.a": {es:"Depende del punto de partida, pero el diagnóstico inicial ya suele revelar en semanas, no meses, dónde está el mayor punto de fricción — y ahí es donde empezamos a actuar primero.", en:"It depends on the starting point, but the initial diagnosis usually reveals within weeks, not months, where the biggest friction point is — and that's where we act first."},
     "faq7.q": {es:"¿Qué es exactamente una PMO externa y cuándo compensa?", en:"What exactly is an outsourced PMO, and when is it worth it?"},
