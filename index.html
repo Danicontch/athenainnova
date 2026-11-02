@@ -678,6 +678,41 @@
   .result-card .d{margin-top:8px; color:var(--ink-soft); font-size:0.88rem; line-height:1.55;}
   .results-note{display:none;}
 
+  /* ---------- CASOS ---------- */
+  .cases-section{background:#fff;}
+  .cases-head{max-width:680px;}
+  .cases-head h2{font-size:clamp(1.9rem,3.4vw,2.8rem); font-weight:600;}
+  .cases-head p{margin-top:18px; color:var(--ink-soft); font-size:1.05rem; line-height:1.7;}
+  .cases-grid{margin-top:52px; display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  @media (max-width:900px){ .cases-grid{grid-template-columns:1fr;} }
+  .case-card{
+    display:flex; flex-direction:column;
+    border:1px solid rgba(11,31,29,0.1); border-radius:var(--radius);
+    padding:32px 28px; background:linear-gradient(180deg,#ffffff,#F4FAF9);
+    transition:transform .25s, border-color .25s;
+  }
+  .case-card:hover{transform:translateY(-4px); border-color:var(--turquoise);}
+  .case-card .n{font-family:'Space Grotesk',sans-serif; font-size:2.4rem; font-weight:700; line-height:1.1;
+    background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .case-card .nl{margin-top:6px; font-weight:600; font-size:0.92rem; color:var(--ink);}
+  .case-card h3{margin-top:22px; font-size:1.2rem; font-weight:600; line-height:1.3;}
+  .case-card p{margin-top:12px; color:var(--ink-soft); font-size:0.93rem; line-height:1.65;}
+  .case-meta{margin-top:auto; padding-top:20px; display:flex; flex-wrap:wrap; gap:8px;}
+  .case-meta span{
+    font-size:0.76rem; color:var(--ink-soft);
+    background:rgba(20,201,183,0.08); border:1px solid rgba(20,201,183,0.22);
+    border-radius:999px; padding:4px 12px;
+  }
+  .cases-note{margin-top:22px; color:var(--ink-soft); font-size:0.85rem; line-height:1.6; max-width:760px;}
+  .clients-strip{
+    margin-top:44px; padding:26px 30px;
+    display:flex; align-items:center; gap:34px; flex-wrap:wrap;
+    border:1px solid rgba(11,31,29,0.1); border-radius:var(--radius); background:#fff;
+  }
+  .clients-strip .clients-label{color:var(--ink-soft);}
+  .clients-logos{display:flex; align-items:center; gap:40px; flex-wrap:wrap;}
+  .clients-logos img{height:54px; width:auto; object-fit:contain;}
+
   /* ---------- AUTODIAGNÓSTICO ---------- */
   .quiz-section{background:radial-gradient(120% 100% at 85% 0%, var(--indigo-800) 0%, var(--indigo-950) 60%); color:#fff; position:relative; overflow:hidden;}
   .quiz-section .section-label{color:var(--amber);}
@@ -1037,6 +1072,7 @@
       <a href="#equipo" data-i18n="nav.team">Equipo</a>
       <a href="#proceso" data-i18n="nav.process">Cómo trabajamos</a>
       <a href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a href="#casos" data-i18n="nav.cases">Casos</a>
       <a href="#autodiagnostico" data-i18n="nav.quiz">Autodiagnóstico</a>
       <a href="#contenido" data-i18n="nav.content">Contenido</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -1278,11 +1314,73 @@
   </div>
 </section>
 
+<!-- ================= CASOS ================= -->
+<section id="casos" class="cases-section">
+  <div class="wrap">
+    <div class="cases-head">
+      <div class="section-label"><span class="num">06</span><span class="mono" data-i18n="cases.label">Casos</span></div>
+      <h2 data-i18n="cases.h2">Proyectos reales, resultados medibles</h2>
+      <p data-i18n="cases.p">Proyectos de tecnología, cloud e IA dirigidos por nuestras socias. Los clientes aparecen sin nombre por confidencialidad.</p>
+    </div>
+    <div class="cases-grid">
+      <article class="case-card">
+        <div class="n">+30%</div>
+        <div class="nl" data-i18n="case1.nl">de efectividad en la ejecución de proyectos</div>
+        <h3 data-i18n="case1.h3">De cero a una PMO en una empresa que pasó de 10 a 80 personas</h3>
+        <p data-i18n="case1.p">Un partner de Google Cloud en Latinoamérica crecía sin PMO ni una forma común de entregar. Se creó la primera PMO desde cero, con marcos de entrega estándar, reporting ejecutivo y gobierno del portafolio.</p>
+        <div class="case-meta">
+          <span data-i18n="case1.m1">Partner de Google Cloud</span>
+          <span data-i18n="case1.m2">Más de 1 año</span>
+          <span data-i18n="case1.m3">Equipo de 10 personas</span>
+        </div>
+      </article>
+      <article class="case-card">
+        <div class="n" data-i18n="case2.n">100.000 €+</div>
+        <div class="nl" data-i18n="case2.nl">de sobrecoste evitado</div>
+        <h3 data-i18n="case2.h3">Rescate de una migración de Oracle Cloud a Google Cloud</h3>
+        <p data-i18n="case2.p">Un grupo retail latinoamericano migraba sus entornos en cuatro países y el proyecto se retrasaba, con un liderazgo muy técnico y sin límites claros. Una de nuestras socias asumió la dirección ejecutiva: replanificó, ordenó la relación con los ejecutivos y fijó límites. El retraso se redujo y se evitó un año más de contrato con Oracle.</p>
+        <div class="case-meta">
+          <span data-i18n="case2.m1">Grupo retail</span>
+          <span data-i18n="case2.m2">4 países</span>
+          <span data-i18n="case2.m3">Proyecto de unos 500.000 $</span>
+        </div>
+      </article>
+      <article class="case-card">
+        <div class="n" data-i18n="case3.n">1.000+</div>
+        <div class="nl" data-i18n="case3.nl">usuarios con IA generativa</div>
+        <h3 data-i18n="case3.h3">IA generativa segura para un banco</h3>
+        <p data-i18n="case3.p">Un banco de Centroamérica quería que sus equipos usaran modelos de lenguaje sin salirse de la regulación bancaria. Se entregó una interfaz segura basada en Open WebUI, con despliegue por fases: de una prueba de concepto con unos 5 usuarios a más de 1.000.</p>
+        <div class="case-meta">
+          <span data-i18n="case3.m1">Banco de Centroamérica</span>
+          <span data-i18n="case3.m2">6 meses · 2025</span>
+        </div>
+      </article>
+      <article class="case-card">
+        <div class="n" data-i18n="case5.n">300 €/mes</div>
+        <div class="nl" data-i18n="case5.nl">de ahorro en licencias</div>
+        <h3 data-i18n="case5.h3">Un solo sistema en vez de varias herramientas</h3>
+        <p data-i18n="case5.p">Los datos y las herramientas de la empresa estaban repartidos en varios sistemas. Se implantó Odoo y se migró el módulo de gestión de proyectos, con el equipo reorganizándose a mitad de proyecto. Se dejó de pagar HubSpot y otras herramientas, y los datos quedaron unificados.</p>
+        <div class="case-meta">
+          <span data-i18n="case5.m1">Proyecto interno</span>
+          <span data-i18n="case5.m2">3 meses · 2024-25</span>
+        </div>
+      </article>
+    </div>
+    <p class="cases-note" data-i18n="cases.note">Casos de la experiencia previa de nuestras socias dirigiendo proyectos de tecnología. Los datos son reales; los nombres de clientes se omiten.</p>
+    <div class="clients-strip">
+      <div class="clients-label mono" data-i18n="clients.label">Han trabajado con nosotras</div>
+      <div class="clients-logos">
+        <img src="assets/logo-nanai.png" alt="Nanai" width="79" height="54" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= AUTODIAGNÓSTICO (lead magnet) ================= -->
 <section id="autodiagnostico" class="quiz-section">
   <div class="wrap">
     <div class="quiz-head">
-      <div class="section-label"><span class="num">06</span><span class="mono" data-i18n="quiz.label">Autodiagnóstico</span></div>
+      <div class="section-label"><span class="num">07</span><span class="mono" data-i18n="quiz.label">Autodiagnóstico</span></div>
       <h2 data-i18n="quiz.h2">¿Tus proyectos están realmente bajo control?</h2>
       <p data-i18n="quiz.p">8 preguntas, 2 minutos. Descubre si tu entrega está bajo control, navegando a ciegas o en modo apagafuegos — y cuáles son tus puntos débiles.</p>
     </div>
@@ -1332,7 +1430,7 @@
 <section id="contenido" class="content-section">
   <div class="wrap">
     <div class="content-head">
-      <div class="section-label"><span class="num">07</span><span class="mono" data-i18n="content.label">Contenido</span></div>
+      <div class="section-label"><span class="num">08</span><span class="mono" data-i18n="content.label">Contenido</span></div>
       <h2 data-i18n="content.h2">Ideas que compartimos</h2>
       <p data-i18n="content.p">Lo que publicamos en LinkedIn sobre dirección de proyectos, IA y agentes — pensamiento en progreso, no un caso de estudio pulido.</p>
     </div>
@@ -1370,7 +1468,7 @@
 <section id="faq">
   <div class="wrap">
     <div class="content-head">
-      <div class="section-label"><span class="num">08</span><span class="mono" data-i18n="faq.label">Preguntas frecuentes</span></div>
+      <div class="section-label"><span class="num">09</span><span class="mono" data-i18n="faq.label">Preguntas frecuentes</span></div>
       <h2 data-i18n="faq.h2">Antes de que preguntes.</h2>
     </div>
     <div class="faq-list">
@@ -1422,7 +1520,7 @@
 <section id="contacto" class="contact-section">
   <div class="wrap contact-grid">
     <div>
-      <div class="section-label"><span class="num">09</span><span class="mono" data-i18n="contact.label">Contacto</span></div>
+      <div class="section-label"><span class="num">10</span><span class="mono" data-i18n="contact.label">Contacto</span></div>
       <h2 data-i18n="contact.h2">30 minutos. Cero coste. Toda la claridad.</h2>
       <p data-i18n="contact.p">Cuéntanos qué proyecto se te está complicando, o agenda directamente tu diagnóstico gratuito de 30 minutos.</p>
       <a href="https://calendly.com/daniela-athenainnova/30min" target="_blank" rel="noopener" class="btn-primary contact-cta" data-i18n="contact.calendly">Agenda tu diagnóstico gratis →</a>
@@ -1698,6 +1796,37 @@
     "faq9.a": {es:"Sí, y no solo para empresas de tecnología: damos workshops a medida a cualquier empresa o institución, por ejemplo de IA aplicada al trabajo diario, de adopción de IA y control de costes, o de procesos estándar y dirección de proyectos. Cuéntanos qué necesita tu equipo y proponemos formato y duración.", en:"Yes, and not only for tech companies: we run tailored workshops for any company or institution, for example on AI applied to daily work, AI adoption and cost control, or standard processes and project management. Tell us what your team needs and we'll propose a format and length."},
     "cta.services.p": {es:"¿No sabes por cuál empezar? Descubre en 2 minutos dónde se está atascando tu ejecución.", en:"Not sure where to start? Find out in 2 minutes where your delivery is getting stuck."},
     "cta.services.btn": {es:"Hacer el autodiagnóstico →", en:"Take the self-assessment →"},
+    "nav.cases": {es:"Casos", en:"Cases"},
+    "cases.label": {es:"Casos", en:"Cases"},
+    "cases.h2": {es:"Proyectos reales, resultados medibles", en:"Real projects, measurable results"},
+    "cases.p": {es:"Proyectos de tecnología, cloud e IA dirigidos por nuestras socias. Los clientes aparecen sin nombre por confidencialidad.", en:"Technology, cloud and AI projects led by our partners. Clients appear without names for confidentiality."},
+    "cases.note": {es:"Casos de la experiencia previa de nuestras socias dirigiendo proyectos de tecnología. Los datos son reales; los nombres de clientes se omiten.", en:"Cases from our partners' prior experience leading technology projects. The figures are real; client names are omitted."},
+    "clients.label": {es:"Han trabajado con nosotras", en:"They have worked with us"},
+    "case1.nl": {es:"de efectividad en la ejecución de proyectos", en:"project delivery effectiveness"},
+    "case1.h3": {es:"De cero a una PMO en una empresa que pasó de 10 a 80 personas", en:"From zero to a PMO in a company that grew from 10 to 80 people"},
+    "case1.p": {es:"Un partner de Google Cloud en Latinoamérica crecía sin PMO ni una forma común de entregar. Se creó la primera PMO desde cero, con marcos de entrega estándar, reporting ejecutivo y gobierno del portafolio.", en:"A Google Cloud partner in Latin America was growing with no PMO and no common way to deliver. The company's first PMO was built from scratch, with standard delivery frameworks, executive reporting and portfolio governance."},
+    "case1.m1": {es:"Partner de Google Cloud", en:"Google Cloud partner"},
+    "case1.m2": {es:"Más de 1 año", en:"Over 1 year"},
+    "case1.m3": {es:"Equipo de 10 personas", en:"Team of 10"},
+    "case2.nl": {es:"de sobrecoste evitado", en:"in overrun avoided"},
+    "case2.h3": {es:"Rescate de una migración de Oracle Cloud a Google Cloud", en:"Rescuing a migration from Oracle Cloud to Google Cloud"},
+    "case2.p": {es:"Un grupo retail latinoamericano migraba sus entornos en cuatro países y el proyecto se retrasaba, con un liderazgo muy técnico y sin límites claros. Una de nuestras socias asumió la dirección ejecutiva: replanificó, ordenó la relación con los ejecutivos y fijó límites. El retraso se redujo y se evitó un año más de contrato con Oracle.", en:"A Latin American retail group was migrating its environments across four countries and the project was running late, with very technical leadership and no clear boundaries. One of our partners took over executive direction: she replanned, structured the relationship with executives and set clear limits. The delay was reduced and an extra year of Oracle contract was avoided."},
+    "case2.m1": {es:"Grupo retail", en:"Retail group"},
+    "case2.m2": {es:"4 países", en:"4 countries"},
+    "case2.m3": {es:"Proyecto de unos 500.000 $", en:"Project of about $500,000"},
+    "case3.nl": {es:"usuarios con IA generativa", en:"users on generative AI"},
+    "case3.h3": {es:"IA generativa segura para un banco", en:"Secure generative AI for a bank"},
+    "case3.p": {es:"Un banco de Centroamérica quería que sus equipos usaran modelos de lenguaje sin salirse de la regulación bancaria. Se entregó una interfaz segura basada en Open WebUI, con despliegue por fases: de una prueba de concepto con unos 5 usuarios a más de 1.000.", en:"A Central American bank wanted its teams to use language models without stepping outside banking regulation. A secure Open WebUI-based interface was delivered in phases: from a proof of concept with about 5 users to over 1,000."},
+    "case3.m1": {es:"Banco de Centroamérica", en:"Central American bank"},
+    "case3.m2": {es:"6 meses · 2025", en:"6 months · 2025"},
+    "case5.nl": {es:"de ahorro en licencias", en:"saved on licences"},
+    "case5.h3": {es:"Un solo sistema en vez de varias herramientas", en:"One system instead of several tools"},
+    "case5.p": {es:"Los datos y las herramientas de la empresa estaban repartidos en varios sistemas. Se implantó Odoo y se migró el módulo de gestión de proyectos, con el equipo reorganizándose a mitad de proyecto. Se dejó de pagar HubSpot y otras herramientas, y los datos quedaron unificados.", en:"The company's data and tools were spread across several systems. Odoo was implemented and the project management module migrated, even as the team was reorganised mid-project. HubSpot and other tools were dropped and the data was unified."},
+    "case5.m1": {es:"Proyecto interno", en:"Internal project"},
+    "case5.m2": {es:"3 meses · 2024-25", en:"3 months · 2024-25"},
+    "case2.n": {es:"100.000 €+", en:"€100,000+"},
+    "case3.n": {es:"1.000+", en:"1,000+"},
+    "case5.n": {es:"300 €/mes", en:"€300/month"},
     "cta.results.p": {es:"¿Dónde estás tú hoy frente a estos objetivos?", en:"Where do you stand against these targets today?"},
     "cta.results.btn": {es:"Mide tu punto de partida →", en:"Measure your starting point →"},
     "cta.faq.p": {es:"¿Tu pregunta no está aquí? Resuélvela en una llamada de 30 minutos, sin coste.", en:"Question not listed? Get it answered in a free 30-minute call."},
