@@ -712,6 +712,9 @@
   .clients-strip .clients-label{color:var(--ink-soft);}
   .clients-logos{display:flex; align-items:center; gap:40px; flex-wrap:wrap;}
   .clients-logos img{height:54px; width:auto; object-fit:contain;}
+  .clients-strip-cert{margin-top:16px;}
+  .clients-logos img.cert-badge{height:84px; width:84px;}
+  .cert-caption{color:var(--ink-soft); font-size:0.92rem; line-height:1.55; max-width:420px;}
 
   /* ---------- AUTODIAGNÓSTICO ---------- */
   .quiz-section{background:radial-gradient(120% 100% at 85% 0%, var(--indigo-800) 0%, var(--indigo-950) 60%); color:#fff; position:relative; overflow:hidden;}
@@ -1373,6 +1376,13 @@
         <img src="assets/logo-nanai.png" alt="Nanai" width="79" height="54" loading="lazy">
       </div>
     </div>
+    <div class="clients-strip clients-strip-cert">
+      <div class="clients-label mono" data-i18n="certs.label">Certificaciones</div>
+      <div class="clients-logos">
+        <img class="cert-badge" src="assets/badge-pmp.png" alt="PMP® Project Management Professional, Project Management Institute" width="84" height="84" loading="lazy">
+        <p class="cert-caption" data-i18n="certs.pmp">Certificación PMP® del Project Management Institute (PMI) en nuestro equipo.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1801,6 +1811,8 @@
     "cases.h2": {es:"Proyectos reales, resultados medibles", en:"Real projects, measurable results"},
     "cases.p": {es:"Proyectos de tecnología, cloud e IA dirigidos por nuestras socias. Los clientes aparecen sin nombre por confidencialidad.", en:"Technology, cloud and AI projects led by our partners. Clients appear without names for confidentiality."},
     "cases.note": {es:"Casos de la experiencia previa de nuestras socias dirigiendo proyectos de tecnología. Los datos son reales; los nombres de clientes se omiten.", en:"Cases from our partners' prior experience leading technology projects. The figures are real; client names are omitted."},
+    "certs.label": {es:"Certificaciones", en:"Certifications"},
+    "certs.pmp": {es:"Certificación PMP® del Project Management Institute (PMI) en nuestro equipo.", en:"Project Management Institute (PMI) PMP® certification on our team."},
     "clients.label": {es:"Han trabajado con nosotras", en:"They have worked with us"},
     "case1.nl": {es:"de efectividad en la ejecución de proyectos", en:"project delivery effectiveness"},
     "case1.h3": {es:"De cero a una PMO en una empresa que pasó de 10 a 80 personas", en:"From zero to a PMO in a company that grew from 10 to 80 people"},
